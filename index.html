@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page Navigation with Difference Checker</title>
+    <title>Dynamic Page Navigation with Inline Differences</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/diff/dist/diff.min.js"></script>
     <style>
@@ -32,6 +32,8 @@
         .input-text, .rewritten-text {
             padding: 10px;
             border-radius: 5px;
+            white-space: pre-wrap;
+            line-height: 1.6;
         }
         .input-text {
             background-color: #ffe5e5;
@@ -74,15 +76,6 @@
         .arrow:hover {
             background-color: #0056b3;
         }
-        .difference-checker {
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            white-space: pre-wrap;
-            line-height: 1.6;
-        }
         .added {
             background-color: #d4f8d4;
         }
@@ -97,16 +90,15 @@
     <div class="content">
         <div class="text-section">
             <h3>Input Text</h3>
-            <div class="input-text" id="inputText">I wouldnt turn her in becuase she is my wife. She made a mistake that we can get over it. 
-                If she trusted me by telling me what she did then I couldn't do that to her.
+            <div class="input-text" id="inputText">
+                FOUNDER IS NOT A PERSON WHO "DISCOVERS" A PLACE ...
             </div>
         </div>
 
         <div class="text-section">
             <h3>Rewritten Text - Toxic Emotion</h3>
-            <div class="rewritten-text" id="rewrittenText"> No I wouldn't turn in my spouse. 
-                Just because the girl that i married killed someone doesn't make them a terrible person. 
-                People make mistakes. I would never turn my wife in.
+            <div class="rewritten-text" id="rewrittenText">
+                I respectfully disagree with the notion that a founder is ...
             </div>
         </div>
     </div>
@@ -124,11 +116,6 @@
         BERT Score: 88%
     </div>
 
-    <h3>Differences Between Input and Rewritten Text</h3>
-    <div id="differenceChecker" class="difference-checker">
-        Differences will appear here...
-    </div>
-
     <div class="arrows">
         <span class="arrow" onclick="navigate(-1)">&#8592;</span>
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
@@ -139,8 +126,8 @@
         const datasets = [
             {
                 topic: "Topic: William Farquhar and Singapore",
-                inputText: "I wouldnt turn her in becuase she is my wife. She made a mistake that we can get over it. If she trusted me by telling me what she did then I couldn't do that to her.",
-                rewrittenText: "No I wouldn't turn in my spouse. Just because the girl that i married killed someone doesn't make them a terrible person. People make mistakes. I would never turn my wife in.",
+                inputText: "FOUNDER IS NOT A PERSON WHO \"DISCOVERS\" A PLACE ... Dataset 1 Text.",
+                rewrittenText: "I respectfully disagree with the notion ... Dataset 1 Rewritten Text.",
                 bertScore: "BERT Score: 88%",
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
                 chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
@@ -214,8 +201,8 @@
 
             // Update Texts
             document.getElementById('topic').innerText = data.topic;
-            document.getElementById('inputText').innerText = data.inputText;
-            document.getElementById('rewrittenText').innerText = data.rewrittenText;
+            updateTextWithDifferences('inputText', data.inputText, data.rewrittenText, false);
+            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText, true);
             document.getElementById('bertScore').innerText = data.bertScore;
 
             // Update Charts
@@ -226,28 +213,25 @@
             chart2.data.labels = data.chart2Data.labels;
             chart2.data.datasets[0].data = data.chart2Data.values;
             chart2.update();
-
-            // Update Differences
-            checkDifferences(data.inputText, data.rewrittenText);
         }
 
-        // Function to check differences between Input Text and Rewritten Text
-        function checkDifferences(inputText, rewrittenText) {
-            const diff = Diff.diffWords(inputText, rewrittenText);
-            const differenceChecker = document.getElementById('differenceChecker');
-            differenceChecker.innerHTML = ''; // Clear previous differences
+        // Function to update text with differences highlighted
+        function updateTextWithDifferences(elementId, text1, text2, isRewritten) {
+            const diff = Diff.diffWords(text1, text2);
+            const element = document.getElementById(elementId);
+            element.innerHTML = ''; // Clear previous text
 
             diff.forEach(part => {
                 const span = document.createElement('span');
                 span.textContent = part.value;
 
-                if (part.added) {
+                if (isRewritten && part.added) {
                     span.classList.add('added'); // Green for added text
-                } else if (part.removed) {
+                } else if (!isRewritten && part.removed) {
                     span.classList.add('removed'); // Red for removed text
                 }
 
-                differenceChecker.appendChild(span);
+                element.appendChild(span);
             });
         }
 

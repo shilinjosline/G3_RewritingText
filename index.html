@@ -13,9 +13,22 @@
             padding: 20px;
             background-color: #f4f4f4;
             color: #333;
+            position: relative;
         }
-        h1, h3 {
+        h1 {
             text-align: center;
+            margin-top: 0;
+        }
+        .bert-score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
         }
         .content {
             display: flex;
@@ -41,17 +54,8 @@
             margin-top: 20px;
         }
         .chart-container {
-            width: 45%;
-        }
-        .bert-score {
-            text-align: center;
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #007bff;
-            background-color: #e5f3ff;
-            color: #007bff;
-            font-size: 1.2em;
-            font-weight: bold;
+            width: 100%;
+            max-width: 600px;
         }
         .arrows {
             display: flex;
@@ -59,13 +63,14 @@
             margin-top: 30px;
         }
         .arrow {
-            font-size: 2em;
+            font-size: 1.5em;
             cursor: pointer;
             user-select: none;
-            padding: 10px 20px;
+            padding: 5px 10px;
             border-radius: 50%;
             background-color: #007bff;
             color: white;
+            text-align: center;
         }
         .arrow:hover {
             background-color: #0056b3;
@@ -83,6 +88,7 @@
 </head>
 <body>
     <h1 id="topic">Topic: William Farquhar and Singapore</h1>
+    <div class="bert-score" id="bertScore">BERT Score: 88%</div>
 
     <div class="content">
         <div class="text-section">
@@ -107,10 +113,6 @@
         <div class="chart-container">
             <canvas id="chart2"></canvas>
         </div>
-    </div>
-
-    <div class="bert-score" id="bertScore">
-        BERT Score: 88%
     </div>
 
     <div class="arrows">
@@ -146,7 +148,7 @@
         const ctx2 = document.getElementById('chart2').getContext('2d');
 
         const chart1 = new Chart(ctx1, {
-            type: 'bar',
+            type: 'horizontalBar', // Changed to horizontal bar chart
             data: {
                 labels: datasets[0].chart1Data.labels,
                 datasets: [{
@@ -157,11 +159,11 @@
                     borderWidth: 1
                 }]
             },
-            options: { scales: { y: { beginAtZero: true } } }
+            options: { scales: { x: { beginAtZero: true } } }
         });
 
         const chart2 = new Chart(ctx2, {
-            type: 'bar',
+            type: 'horizontalBar', // Changed to horizontal bar chart
             data: {
                 labels: datasets[0].chart2Data.labels,
                 datasets: [{
@@ -172,7 +174,7 @@
                     borderWidth: 1
                 }]
             },
-            options: { scales: { y: { beginAtZero: true } } }
+            options: { scales: { x: { beginAtZero: true } } }
         });
 
         function navigate(direction) {

@@ -52,12 +52,16 @@
         .probability-chart {
             width: 30%;
         }
-        .slider-section {
+        .bert-score {
             text-align: center;
             margin-top: 20px;
-        }
-        .slider {
-            margin-top: 10px;
+            padding: 15px;
+            border: 1px solid #007bff;
+            background-color: #e5f3ff;
+            color: #007bff;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
         .options {
             display: flex;
@@ -111,9 +115,8 @@
             </div>
         </div>
 
-        <div class="slider-section">
-            <h4>Temperature</h4>
-            <input type="range" min="0.1" max="2.0" step="0.1" value="1" class="slider">
+        <div class="bert-score">
+            BERT Score: 88%
         </div>
 
         <div class="options">

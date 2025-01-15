@@ -35,12 +35,6 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
-        .input-text {
-            background-color: #ffe5e5;
-        }
-        .rewritten-text {
-            background-color: #e5ffe5;
-        }
         .charts {
             display: flex;
             justify-content: space-around;
@@ -77,10 +71,10 @@
             background-color: #0056b3;
         }
         .added {
-            background-color: #d4f8d4;
+            color: green; /* Optional: Text color for added text */
         }
         .removed {
-            background-color: #f8d4d4;
+            color: red; /* Optional: Text color for removed text */
         }
     </style>
 </head>
@@ -139,18 +133,10 @@
                 bertScore: "BERT Score: 92%",
                 chart1Data: { labels: ["P", "Q", "R", "S"], values: [30, 20, 10, 15] },
                 chart2Data: { labels: ["T", "U", "V", "W"], values: [5, 12, 18, 22] }
-            },
-            {
-                topic: "Topic: A Third Dataset Example",
-                inputText: "lala",
-                rewrittenText: "lele lala",
-                bertScore: "BERT Score: 85%",
-                chart1Data: { labels: ["X1", "X2", "X3", "X4"], values: [40, 25, 15, 10] },
-                chart2Data: { labels: ["Y1", "Y2", "Y3", "Y4"], values: [20, 15, 10, 5] }
             }
         ];
 
-        let currentIndex = 0; // Track current dataset index
+        let currentIndex = 0;
 
         // Initialize Charts
         const ctx1 = document.getElementById('chart1').getContext('2d');
@@ -189,23 +175,16 @@
         // Function to navigate between datasets
         function navigate(direction) {
             currentIndex += direction;
-
-            // Wrap around if out of bounds
-            if (currentIndex < 0) {
-                currentIndex = datasets.length - 1;
-            } else if (currentIndex >= datasets.length) {
-                currentIndex = 0;
-            }
+            if (currentIndex < 0) currentIndex = datasets.length - 1;
+            if (currentIndex >= datasets.length) currentIndex = 0;
 
             const data = datasets[currentIndex];
 
-            // Update Texts
             document.getElementById('topic').innerText = data.topic;
             updateTextWithDifferences('inputText', data.inputText, data.rewrittenText, false);
             updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText, true);
             document.getElementById('bertScore').innerText = data.bertScore;
 
-            // Update Charts
             chart1.data.labels = data.chart1Data.labels;
             chart1.data.datasets[0].data = data.chart1Data.values;
             chart1.update();
@@ -215,27 +194,20 @@
             chart2.update();
         }
 
-        // Function to update text with differences highlighted
+        // Function to update text with differences
         function updateTextWithDifferences(elementId, text1, text2, isRewritten) {
             const diff = Diff.diffWords(text1, text2);
             const element = document.getElementById(elementId);
-            element.innerHTML = ''; // Clear previous text
-
+            element.innerHTML = '';
             diff.forEach(part => {
                 const span = document.createElement('span');
                 span.textContent = part.value;
-
-                if (isRewritten && part.added) {
-                    span.classList.add('added'); // Green for added text
-                } else if (!isRewritten && part.removed) {
-                    span.classList.add('removed'); // Red for removed text
-                }
-
+                if (isRewritten && part.added) span.classList.add('added');
+                else if (!isRewritten && part.removed) span.classList.add('removed');
                 element.appendChild(span);
             });
         }
 
-        // Initial Load
         navigate(0);
     </script>
 </body>

@@ -71,10 +71,13 @@
             background-color: #0056b3;
         }
         .added {
-            color: green; /* Optional: Text color for added text */
+            background-color: #d4f8d4; /* Green background for added text */
+            font-weight: bold;
         }
         .removed {
-            color: red; /* Optional: Text color for removed text */
+            background-color: #f8d4d4; /* Red background for removed text */
+            font-weight: bold;
+            text-decoration: line-through;
         }
     </style>
 </head>
@@ -83,16 +86,16 @@
 
     <div class="content">
         <div class="text-section">
-            <h3>Input Text</h3>
+            <h3>Original Text</h3>
             <div class="input-text" id="inputText">
-                FOUNDER IS NOT A PERSON WHO "DISCOVERS" A PLACE ...
+                Original text will appear here.
             </div>
         </div>
 
         <div class="text-section">
-            <h3>Rewritten Text - Toxic Emotion</h3>
+            <h3>Modified Text with Highlights</h3>
             <div class="rewritten-text" id="rewrittenText">
-                I respectfully disagree with the notion that a founder is ...
+                Modified text with highlights will appear here.
             </div>
         </div>
     </div>
@@ -120,7 +123,7 @@
         const datasets = [
             {
                 topic: "Topic: William Farquhar and Singapore",
-                inputText: "people cant be forced to wear school uniforms, i mean each person has theri own wish whether they want to or dont want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
+                inputText: "People can't be forced to wear school uniforms, I mean each person has their own wish whether they want to or don't want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
                 rewrittenText: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.",
                 bertScore: "BERT Score: 88%",
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
@@ -172,17 +175,15 @@
             options: { scales: { y: { beginAtZero: true } } }
         });
 
-        // Function to navigate between datasets
         function navigate(direction) {
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = datasets.length - 1;
             if (currentIndex >= datasets.length) currentIndex = 0;
 
             const data = datasets[currentIndex];
-
             document.getElementById('topic').innerText = data.topic;
-            updateTextWithDifferences('inputText', data.inputText, data.rewrittenText, false);
-            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText, true);
+            document.getElementById('inputText').innerText = data.inputText;
+            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText);
             document.getElementById('bertScore').innerText = data.bertScore;
 
             chart1.data.labels = data.chart1Data.labels;
@@ -194,16 +195,15 @@
             chart2.update();
         }
 
-        // Function to update text with differences
-        function updateTextWithDifferences(elementId, text1, text2, isRewritten) {
+        function updateTextWithDifferences(elementId, text1, text2) {
             const diff = Diff.diffWords(text1, text2);
             const element = document.getElementById(elementId);
             element.innerHTML = '';
             diff.forEach(part => {
                 const span = document.createElement('span');
                 span.textContent = part.value;
-                if (isRewritten && part.added) span.classList.add('added');
-                else if (!isRewritten && part.removed) span.classList.add('removed');
+                if (part.added) span.classList.add('added');
+                else if (part.removed) span.classList.add('removed');
                 element.appendChild(span);
             });
         }

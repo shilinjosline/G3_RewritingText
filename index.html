@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Rewrite Analysis</title>
+    <title>Dynamic Text and Chart Update</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f4f4f4;
             color: #333;
         }
-        .container {
-            padding: 20px;
-        }
-        h1 {
+        h1, h3 {
             text-align: center;
-            color: #333;
         }
         .content {
             display: flex;
@@ -31,26 +28,23 @@
             border-radius: 5px;
             background-color: #fefefe;
         }
-        .text-section h3 {
-            margin-top: 0;
+        .input-text, .rewritten-text {
+            padding: 10px;
+            border-radius: 5px;
         }
         .input-text {
             background-color: #ffe5e5;
-            padding: 10px;
-            border-radius: 5px;
         }
         .rewritten-text {
             background-color: #e5ffe5;
-            padding: 10px;
-            border-radius: 5px;
         }
-        .probabilities {
+        .charts {
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
         }
-        .probability-chart {
-            width: 30%;
+        .chart-container {
+            width: 45%;
         }
         .bert-score {
             text-align: center;
@@ -59,71 +53,136 @@
             border: 1px solid #007bff;
             background-color: #e5f3ff;
             color: #007bff;
-            border-radius: 5px;
             font-size: 1.2em;
             font-weight: bold;
         }
-        .options {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .options button {
-            margin: 0 5px;
+        button {
+            display: block;
+            margin: 20px auto;
             padding: 10px 20px;
-            border: none;
+            font-size: 16px;
             background-color: #007bff;
             color: white;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        .options button:hover {
+        button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Topic: William Farquhar and Singapore</h1>
-        
-        <div class="content">
-            <div class="text-section">
-                <h3>Input Text</h3>
-                <div class="input-text">
-                    FOUNDER IS NOT A PERSON WHO "DISCOVERS" A PLACE ... 
-                    (your input text here)
-                </div>
-            </div>
-            
-            <div class="text-section">
-                <h3>Rewritten Text - Toxic Emotion</h3>
-                <div class="rewritten-text">
-                    I respectfully disagree with the notion that a founder is ... 
-                    (your rewritten text here)
-                </div>
+    <h1 id="topic">Topic: William Farquhar and Singapore</h1>
+
+    <div class="content">
+        <div class="text-section">
+            <h3>Input Text</h3>
+            <div class="input-text" id="inputText">
+                FOUNDER IS NOT A PERSON WHO "DISCOVERS" A PLACE ...
+                (Your input text here)
             </div>
         </div>
 
-        <div class="probabilities">
-            <div class="probability-chart">
-                <h4>Class Probabilities</h4>
-                <img src="images/chart1.png" alt="Class Probabilities Chart 1" width="100%">
+        <div class="text-section">
+            <h3>Rewritten Text - Toxic Emotion</h3>
+            <div class="rewritten-text" id="rewrittenText">
+                I respectfully disagree with the notion that a founder is ...
+                (Your rewritten text here)
             </div>
-            <div class="probability-chart">
-                <h4>Class Probabilities</h4>
-                <img src="images/chart2.png" alt="Class Probabilities Chart 2" width="100%">
-            </div>
-        </div>
-
-        <div class="bert-score">
-            BERT Score: 88%
-        </div>
-
-        <div class="options">
-            <button>Option 1</button>
-            <button>Option 2</button>
-            <button>Option 3</button>
         </div>
     </div>
+
+    <div class="charts">
+        <div class="chart-container">
+            <canvas id="chart1"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart2"></canvas>
+        </div>
+    </div>
+
+    <div class="bert-score" id="bertScore">
+        BERT Score: 88%
+    </div>
+
+    <button onclick="loadData('dataset1')">Load Dataset 1</button>
+    <button onclick="loadData('dataset2')">Load Dataset 2</button>
+
+    <script>
+        // Data for updates
+        const datasets = {
+            dataset1: {
+                topic: "Topic: William Farquhar and Singapore",
+                inputText: "FOUNDER IS NOT A PERSON WHO \"DISCOVERS\" A PLACE ... Dataset 1 Text.",
+                rewrittenText: "I respectfully disagree with the notion ... Dataset 1 Rewritten Text.",
+                bertScore: "BERT Score: 88%",
+                chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
+                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
+            },
+            dataset2: {
+                topic: "Topic: A Different Historical Figure",
+                inputText: "This is a new input text for Dataset 2 ...",
+                rewrittenText: "The rewritten text for Dataset 2 goes here ...",
+                bertScore: "BERT Score: 92%",
+                chart1Data: { labels: ["P", "Q", "R", "S"], values: [30, 20, 10, 15] },
+                chart2Data: { labels: ["T", "U", "V", "W"], values: [5, 12, 18, 22] }
+            }
+        };
+
+        // Initialize Charts
+        const ctx1 = document.getElementById('chart1').getContext('2d');
+        const ctx2 = document.getElementById('chart2').getContext('2d');
+
+        const chart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: datasets.dataset1.chart1Data.labels,
+                datasets: [{
+                    label: 'Values',
+                    data: datasets.dataset1.chart1Data.values,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+
+        const chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: datasets.dataset1.chart2Data.labels,
+                datasets: [{
+                    label: 'Values',
+                    data: datasets.dataset1.chart2Data.values,
+                    backgroundColor: 'rgba(192, 75, 75, 0.2)',
+                    borderColor: 'rgba(192, 75, 75, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+
+        // Function to load new data
+        function loadData(datasetKey) {
+            const data = datasets[datasetKey];
+
+            // Update Texts
+            document.getElementById('topic').innerText = data.topic;
+            document.getElementById('inputText').innerText = data.inputText;
+            document.getElementById('rewrittenText').innerText = data.rewrittenText;
+            document.getElementById('bertScore').innerText = data.bertScore;
+
+            // Update Charts
+            chart1.data.labels = data.chart1Data.labels;
+            chart1.data.datasets[0].data = data.chart1Data.values;
+            chart1.update();
+
+            chart2.data.labels = data.chart2Data.labels;
+            chart2.data.datasets[0].data = data.chart2Data.values;
+            chart2.update();
+        }
+    </script>
 </body>
 </html>

@@ -148,7 +148,7 @@
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
-    <script>
+     <script>
         const datasets = [
             {
                 topic: "Topic: William Farquhar and Singapore",
@@ -159,11 +159,39 @@
                         text: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.", 
                         bertScore: "BERT Score: 88%",
                         chart2Data: { labels: ["A", "B", "C"], values: [8, 15, 20] }
+                    },
+                    { 
+                        headerValue: "Constructive Feedback", 
+                        text: "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression.", 
+                        bertScore: "BERT Score: 85%",
+                        chart2Data: { labels: ["D", "E", "F"], values: [10, 14, 18] }
                     }
                 ],
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] }
+            },
+            {
+                topic: "Topic: Pricing Policies",
+                inputText: "I've always been bothered by pricing based on age. Take movies, for example. A seat is a seat! Why should people between the ages of 12 and 64 pay more for the same seat? And what is a 'senior discount' about?",
+                rewrittenTexts: [
+                    { 
+                        headerValue: "Toxic Emotions", 
+                        text: "Pricing policies based on age seem inherently unfair. Why should age dictate the cost of a movie ticket for the same experience?", 
+                        bertScore: "BERT Score: 82%",
+                        chart2Data: { labels: ["G", "H", "I"], values: [9, 16, 12] }
+                    },
+                    { 
+                        headerValue: "Fair Pricing", 
+                        text: "Age-based pricing for seats, such as movie tickets, raises questions about fairness and equality in customer experiences.", 
+                        bertScore: "BERT Score: 85%",
+                        chart2Data: { labels: ["J", "K", "L"], values: [11, 19, 14] }
+                    }
+                ],
+                chart1Data: { labels: ["X", "Y", "Z", "W"], values: [12, 18, 10, 25] }
             }
         ];
+
+        let currentIndex = 0;
+        let rewrittenIndex = 0;
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
@@ -181,12 +209,12 @@
                 }]
             },
             options: { 
+                indexAxis: 'y',
                 plugins: {
                     legend: { display: false }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true,
                         title: { display: true, text: "Probabilities" },
                         grid: { display: false }
                     },
@@ -208,12 +236,12 @@
                 }]
             },
             options: { 
+                indexAxis: 'y',
                 plugins: {
                     legend: { display: false }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true,
                         title: { display: true, text: "Probabilities" },
                         grid: { display: false }
                     },
@@ -223,15 +251,49 @@
         });
 
         function navigate(direction) {
-            // Content switching logic...
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = datasets.length - 1;
+            if (currentIndex >= datasets.length) currentIndex = 0;
+
+            rewrittenIndex = 0; // Reset rewritten index when switching datasets
+            const data = datasets[currentIndex];
+            document.getElementById('topic').innerText = data.topic;
+            document.getElementById('inputText').innerText = data.inputText;
+            updateRewrittenText();
         }
 
         function navigateRewritten(direction) {
-            // Rewritten text switching logic...
+            const data = datasets[currentIndex];
+            rewrittenIndex += direction;
+            if (rewrittenIndex < 0) rewrittenIndex = data.rewrittenTexts.length - 1;
+            if (rewrittenIndex >= data.rewrittenTexts.length) rewrittenIndex = 0;
+            updateRewrittenText();
         }
 
         function updateRewrittenText() {
-            // Rewritten text update logic...
+            const data = datasets[currentIndex];
+            const rewritten = data.rewrittenTexts[rewrittenIndex];
+            document.getElementById('rewrittenHeader').innerText = Rewritten Text: ${rewritten.headerValue};
+            document.getElementById('bertScore').innerText = rewritten.bertScore;
+            updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
+
+            // Update chart2 with the current rewritten text's chart data
+            chart2.data.labels = rewritten.chart2Data.labels;
+            chart2.data.datasets[0].data = rewritten.chart2Data.values;
+            chart2.update();
+        }
+
+        function updateTextWithDifferences(elementId, text1, text2) {
+            const diff = Diff.diffWords(text1, text2);
+            const element = document.getElementById(elementId);
+            element.innerHTML = '';
+            diff.forEach(part => {
+                const span = document.createElement('span');
+                span.textContent = part.value;
+                if (part.added) span.classList.add('added');
+                else if (part.removed) span.classList.add('removed');
+                element.appendChild(span);
+            });
         }
 
         navigate(0);

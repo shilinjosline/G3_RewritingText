@@ -67,9 +67,9 @@
             right: 20px;
             padding: 5px 10px;
             font-size: 12px;
-            background-color: #007bff;
+            background-color: black;
             color: white;
-            border-radius: 5px;
+            border-radius: 3px;
             font-weight: bold;
         }
         .arrows {
@@ -137,8 +137,8 @@
     </div>
 
     <div class="arrows">
-        <span class="arrow" onclick="navigate(-1)">&#8592; Input</span>
-        <span class="arrow" onclick="navigate(1)">Input &#8594;</span>
+        <span class="arrow" onclick="navigate(-1)">&#8592;</span>
+        <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
     <script>
@@ -196,8 +196,8 @@
                 datasets: [{
                     label: 'Values',
                     data: datasets[0].chart1Data.values,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(128, 128, 128, 0.2)',
+                    borderColor: 'rgba(128, 128, 128, 1)',
                     borderWidth: 1
                 }]
             },
@@ -211,8 +211,8 @@
                 datasets: [{
                     label: 'Values',
                     data: datasets[0].rewrittenTexts[0].chart2Data.values,
-                    backgroundColor: 'rgba(192, 75, 75, 0.2)',
-                    borderColor: 'rgba(192, 75, 75, 1)',
+                    backgroundColor: 'rgba(128, 128, 128, 0.2)',
+                    borderColor: 'rgba(128, 128, 128, 1)',
                     borderWidth: 1
                 }]
             },

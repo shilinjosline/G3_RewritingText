@@ -1,3 +1,5 @@
+
+You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,12 +61,7 @@
             margin-top: 20px;
         }
         .chart-container {
-            width: 40%;
-        }
-        .chart-header {
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: bold;
+            width: 45%;
         }
         .bert-score {
             position: absolute;
@@ -130,11 +127,9 @@
 
     <div class="charts">
         <div class="chart-container">
-            <div class="chart-header">Class Probabilities</div>
             <canvas id="chart1"></canvas>
         </div>
         <div class="chart-container">
-            <div class="chart-header">Class Probabilities</div>
             <canvas id="chart2"></canvas>
         </div>
     </div>
@@ -148,7 +143,7 @@
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
-     <script>
+    <script>
         const datasets = [
             {
                 topic: "Topic: William Farquhar and Singapore",
@@ -208,19 +203,7 @@
                     borderWidth: 1
                 }]
             },
-            options: { 
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        title: { display: true, text: "Probabilities" },
-                        grid: { display: false }
-                    },
-                    x: { grid: { display: false } }
-                }
-            }
+            options: { scales: { y: { beginAtZero: true } } }
         });
 
         const chart2 = new Chart(ctx2, {
@@ -235,19 +218,7 @@
                     borderWidth: 1
                 }]
             },
-            options: { 
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        title: { display: true, text: "Probabilities" },
-                        grid: { display: false }
-                    },
-                    x: { grid: { display: false } }
-                }
-            }
+            options: { scales: { y: { beginAtZero: true } } }
         });
 
         function navigate(direction) {

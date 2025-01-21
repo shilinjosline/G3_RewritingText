@@ -196,7 +196,7 @@
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
-
+        
         const chart1 = new Chart(ctx1, {
             type: 'bar',
             data: {
@@ -210,11 +210,9 @@
                 }]
             },
             options: {
+                indexAxis: 'y', // Flip the axes to make the chart horizontal
                 scales: {
                     x: {
-                        grid: { display: false }
-                    },
-                    y: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
@@ -225,12 +223,14 @@
                             }
                         },
                         title: {
-                            display: true, // Enable the title
-                            text: 'Probability', // Text for the Y-axis title
+                            display: true,
+                            text: 'Probability',
                             font: {
-                                size: 14 // Optional: Adjust font size
+                                size: 14
                             }
-                        },
+                        }
+                    },
+                    y: {
                         grid: { display: false }
                     }
                 }
@@ -250,11 +250,9 @@
                 }]
             },
             options: {
+                indexAxis: 'y', // Flip the axes to make the chart horizontal
                 scales: {
                     x: {
-                        grid: { display: false }
-                    },
-                    y: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
@@ -265,18 +263,20 @@
                             }
                         },
                         title: {
-                            display: true, // Enable the title
-                            text: 'Probability', // Text for the Y-axis title
+                            display: true,
+                            text: 'Probability',
                             font: {
-                                size: 14 // Optional: Adjust font size
+                                size: 14
                             }
-                        },
+                        }
+                    },
+                    y: {
                         grid: { display: false }
                     }
                 }
             }
         });
-
+        
         function navigate(direction) {
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = datasets.length - 1;

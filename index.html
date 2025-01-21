@@ -61,6 +61,12 @@
         .chart-container {
             width: 45%;
         }
+        .chart-container h3 {
+            text-align: center; /* Center the header above the chart */
+            margin-bottom: 10px; /* Add spacing between the header and chart */
+            font-size: 18px; /* Adjust font size */
+            color: #333; /* Adjust text color */
+        }
         .bert-score {
             position: absolute;
             top: 20px;
@@ -122,12 +128,14 @@
             </div>
         </div>
     </div>
-
+    
     <div class="charts">
         <div class="chart-container">
+            <h3>Class Probability</h3>
             <canvas id="chart1"></canvas>
         </div>
         <div class="chart-container">
+            <h3>Class Probability</h3>
             <canvas id="chart2"></canvas>
         </div>
     </div>
@@ -201,9 +209,19 @@
                     borderWidth: 1
                 }]
             },
-            options: { scales: { y: { beginAtZero: true } } }
+            options: {
+                scales: {
+                    x: {
+                        grid: { display: false } // Disable gridlines for x-axis
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { display: false } // Disable gridlines for y-axis
+                    }
+                }
+            }
         });
-
+        
         const chart2 = new Chart(ctx2, {
             type: 'bar',
             data: {
@@ -216,7 +234,17 @@
                     borderWidth: 1
                 }]
             },
-            options: { scales: { y: { beginAtZero: true } } }
+            options: {
+                scales: {
+                    x: {
+                        grid: { display: false } // Disable gridlines for x-axis
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: { display: false } // Disable gridlines for y-axis
+                    }
+                }
+            }
         });
 
         function navigate(direction) {

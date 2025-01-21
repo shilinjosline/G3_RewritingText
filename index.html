@@ -35,6 +35,24 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
+        .rewritten-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .small-arrow {
+            font-size: 1.5em;
+            cursor: pointer;
+            user-select: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+        }
+        .small-arrow:hover {
+            background-color: #0056b3;
+        }
         .charts {
             display: flex;
             justify-content: space-around;
@@ -94,7 +112,11 @@
         </div>
 
         <div class="text-section">
-            <h3 id="rewrittenHeader">Rewritten Text: Toxic Emotions</h3>
+            <div class="rewritten-header">
+                <span class="small-arrow" onclick="navigateRewritten(-1)">&#8592;</span>
+                <h3 id="rewrittenHeader">Rewritten Text: Toxic Emotions</h3>
+                <span class="small-arrow" onclick="navigateRewritten(1)">&#8594;</span>
+            </div>
             <div class="rewritten-text" id="rewrittenText">
                 Modified text with highlights will appear here.
             </div>
@@ -124,24 +146,18 @@
             {
                 topic: "Topic: William Farquhar and Singapore",
                 inputText: "People can't be forced to wear school uniforms, I mean each person has their own wish whether they want to or don't want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
-                rewrittenText: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.",
+                rewrittenTexts: [
+                    { headerValue: "Toxic Emotions", text: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students." },
+                    { headerValue: "Constructive Feedback", text: "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression." }
+                ],
                 bertScore: "BERT Score: 88%",
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
-                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] },
-                headerValue: "Toxic Emotions"
-            },
-            {
-                topic: "Topic: A Different Historical Figure",
-                inputText: "That form of argument degrades this forum, and will cause the arguments to fall to the lowest common denominator. This word, indisputable, I do not think it means what you think it does. I dispute your claim from personal experience, if nothing else. That makes it disputable. I think Yahoo! has chat rooms more attuned to your style of debate. Check them out. You might find a more congenial environment.",
-                rewrittenText: "This approach to argumentation might not contribute positively to the forum's discourse and could potentially lead to less constructive discussions. The term 'indisputable' may have been used in a way that could be open to interpretation. Based on personal experience, I respectfully disagree with your claim, which suggests that it is indeed subject to dispute. Perhaps exploring other platforms, such as Yahoo! chat rooms, could provide a setting that aligns better with your preferred style of discussion and engagement.",
-                bertScore: "BERT Score: 92%",
-                chart1Data: { labels: ["P", "Q", "R", "S"], values: [30, 20, 10, 15] },
-                chart2Data: { labels: ["T", "U", "V", "W"], values: [5, 12, 18, 22] },
-                headerValue: "Sarcasm Detected"
+                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
             }
         ];
 
         let currentIndex = 0;
+        let rewrittenIndex = 0;
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
@@ -181,11 +197,11 @@
             if (currentIndex < 0) currentIndex = datasets.length - 1;
             if (currentIndex >= datasets.length) currentIndex = 0;
 
+            rewrittenIndex = 0; // Reset rewritten index when switching datasets
             const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            document.getElementById('rewrittenHeader').innerText = `Rewritten Text: ${data.headerValue}`;
-            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText);
+            updateRewrittenText();
             document.getElementById('bertScore').innerText = data.bertScore;
 
             chart1.data.labels = data.chart1Data.labels;
@@ -195,6 +211,21 @@
             chart2.data.labels = data.chart2Data.labels;
             chart2.data.datasets[0].data = data.chart2Data.values;
             chart2.update();
+        }
+
+        function navigateRewritten(direction) {
+            const data = datasets[currentIndex];
+            rewrittenIndex += direction;
+            if (rewrittenIndex < 0) rewrittenIndex = data.rewrittenTexts.length - 1;
+            if (rewrittenIndex >= data.rewrittenTexts.length) rewrittenIndex = 0;
+            updateRewrittenText();
+        }
+
+        function updateRewrittenText() {
+            const data = datasets[currentIndex];
+            const rewritten = data.rewrittenTexts[rewrittenIndex];
+            document.getElementById('rewrittenHeader').innerText = `Rewritten Text: ${rewritten.headerValue}`;
+            updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
         }
 
         function updateTextWithDifferences(elementId, text1, text2) {

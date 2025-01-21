@@ -35,6 +35,13 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
+        .editable-box {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
         .charts {
             display: flex;
             justify-content: space-around;
@@ -94,10 +101,11 @@
         </div>
 
         <div class="text-section">
-            <h3>Modified Text with Highlights</h3>
+            <h3>Rewritten Text: Toxic Emotions</h3>
             <div class="rewritten-text" id="rewrittenText">
                 Modified text with highlights will appear here.
             </div>
+            <textarea class="editable-box" id="editableBox"></textarea>
         </div>
     </div>
 
@@ -120,7 +128,6 @@
     </div>
 
     <script>
-        // Data for multiple pages
         const datasets = [
             {
                 topic: "Topic: William Farquhar and Singapore",
@@ -128,7 +135,8 @@
                 rewrittenText: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.",
                 bertScore: "BERT Score: 88%",
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
-                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
+                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] },
+                toxicEmotion: "No toxic emotions detected."
             },
             {
                 topic: "Topic: A Different Historical Figure",
@@ -136,13 +144,13 @@
                 rewrittenText: "This approach to argumentation might not contribute positively to the forum's discourse and could potentially lead to less constructive discussions. The term 'indisputable' may have been used in a way that could be open to interpretation. Based on personal experience, I respectfully disagree with your claim, which suggests that it is indeed subject to dispute. Perhaps exploring other platforms, such as Yahoo! chat rooms, could provide a setting that aligns better with your preferred style of discussion and engagement.",
                 bertScore: "BERT Score: 92%",
                 chart1Data: { labels: ["P", "Q", "R", "S"], values: [30, 20, 10, 15] },
-                chart2Data: { labels: ["T", "U", "V", "W"], values: [5, 12, 18, 22] }
+                chart2Data: { labels: ["T", "U", "V", "W"], values: [5, 12, 18, 22] },
+                toxicEmotion: "Some toxic emotions detected: sarcasm, dismissiveness."
             }
         ];
 
         let currentIndex = 0;
 
-        // Initialize Charts
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
 
@@ -186,6 +194,7 @@
             document.getElementById('inputText').innerText = data.inputText;
             updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenText);
             document.getElementById('bertScore').innerText = data.bertScore;
+            document.getElementById('editableBox').value = data.toxicEmotion;
 
             chart1.data.labels = data.chart1Data.labels;
             chart1.data.datasets[0].data = data.chart1Data.values;

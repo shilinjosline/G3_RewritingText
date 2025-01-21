@@ -144,18 +144,36 @@
     <script>
         const datasets = [
             {
-                topic: "Topic: William Farquhar and Singapore",
+                topic: "Topic: A,
                 inputText: "People can't be forced to wear school uniforms, I mean each person has their own wish whether they want to or don't want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
                 rewrittenTexts: [
                     { 
                         headerValue: "Toxic Emotions", 
-                        text: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.", 
+                        text: "School uniforms should be a matter of personal choice, respecting the individual's preference to wear or not wear them. Principals should carefully reevaluate the current uniform policies and decide if mandatory uniforms truly serve the best interests and diverse needs of their students.", 
                         bertScore: "BERT Score: 88%" 
                     },
                     { 
-                        headerValue: "Constructive Feedback", 
-                        text: "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression.", 
+                        headerValue: "Detrimental Orthography", 
+                        text: "Mandating school uniforms should be reconsidered to allow students the freedom of choice. Each individual has their own preferences, and principals might benefit from reexamining policies to decide if uniform requirements align with the best interests of the school community", 
                         bertScore: "BERT Score: 85%" 
+                    }
+                ],
+                chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
+                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
+            },
+            {
+                topic: "Topic: B",
+                inputText: "I've always been bothered by pricing based on age. Take movies, for example. A seat is a fucking seat ! Why should people between the ages of 12 and 64 pay more for the same seat ? And what the hell is a 'senior discount' about ?",
+                rewrittenTexts: [
+                    { 
+                        headerValue: "Toxic Emotions", 
+                        text: "I've always been bothered by pricing based on age. What's the point of it in the first place?", 
+                        bertScore: "BERT Score: 80%" 
+                    },
+                    { 
+                        headerValue: "Other Reasons", 
+                        text: "I have always been bothered by prices based on age. Take movies for example. A seat is a FUCKING seat! Why should people between the age 12 and 64 pay more for the same seat? And what is a'senior discount' about?", 
+                        bertScore: "BERT Score: 81%" 
                     }
                 ],
                 chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },

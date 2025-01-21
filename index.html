@@ -202,7 +202,7 @@
             data: {
                 labels: datasets[0].chart1Data.labels,
                 datasets: [{
-                    label: 'Values',
+                    label: 'Values', // The legend comes from this "label"
                     data: datasets[0].chart1Data.values,
                     backgroundColor: 'rgba(128, 128, 128, 0.2)',
                     borderColor: 'rgba(128, 128, 128, 1)',
@@ -210,7 +210,12 @@
                 }]
             },
             options: {
-                indexAxis: 'y', // Flip the axes to make the chart horizontal
+                indexAxis: 'y', // Optional: Flip the axes to make the chart horizontal
+                plugins: {
+                    legend: {
+                        display: false // Disable the legend
+                    }
+                },
                 scales: {
                     x: {
                         beginAtZero: true,
@@ -242,7 +247,7 @@
             data: {
                 labels: datasets[0].rewrittenTexts[0].chart2Data.labels,
                 datasets: [{
-                    label: 'Values',
+                    label: 'Values', // The legend comes from this "label"
                     data: datasets[0].rewrittenTexts[0].chart2Data.values,
                     backgroundColor: 'rgba(128, 128, 128, 0.2)',
                     borderColor: 'rgba(128, 128, 128, 1)',
@@ -250,7 +255,12 @@
                 }]
             },
             options: {
-                indexAxis: 'y', // Flip the axes to make the chart horizontal
+                indexAxis: 'y', // Optional: Flip the axes to make the chart horizontal
+                plugins: {
+                    legend: {
+                        display: false // Disable the legend
+                    }
+                },
                 scales: {
                     x: {
                         beginAtZero: true,
@@ -276,6 +286,7 @@
                 }
             }
         });
+
         
         function navigate(direction) {
             currentIndex += direction;

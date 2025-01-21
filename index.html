@@ -242,7 +242,7 @@
         function updateRewrittenText() {
             const data = datasets[currentIndex];
             const rewritten = data.rewrittenTexts[rewrittenIndex];
-            document.getElementById('rewrittenHeader').innerText = Rewritten Text: ${rewritten.headerValue};
+            document.getElementById('rewrittenHeader').innerText = `Rewritten Text: ${rewritten.headerValue}`;
             document.getElementById('bertScore').innerText = rewritten.bertScore;
             updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
 

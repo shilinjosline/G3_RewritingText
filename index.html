@@ -150,16 +150,17 @@
                     { 
                         headerValue: "Toxic Emotions", 
                         text: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.", 
-                        bertScore: "BERT Score: 88%" 
+                        bertScore: "BERT Score: 88%",
+                        chart2Data: { labels: ["A", "B", "C"], values: [8, 15, 20] }
                     },
                     { 
                         headerValue: "Constructive Feedback", 
                         text: "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression.", 
-                        bertScore: "BERT Score: 85%" 
+                        bertScore: "BERT Score: 85%",
+                        chart2Data: { labels: ["D", "E", "F"], values: [10, 14, 18] }
                     }
                 ],
-                chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] },
-                chart2Data: { labels: ["E", "F", "G", "H"], values: [25, 18, 12, 22] }
+                chart1Data: { labels: ["A", "B", "C", "D"], values: [10, 15, 7, 20] }
             },
             {
                 topic: "Topic: Pricing Policies",
@@ -168,16 +169,17 @@
                     { 
                         headerValue: "Toxic Emotions", 
                         text: "Pricing policies based on age seem inherently unfair. Why should age dictate the cost of a movie ticket for the same experience?", 
-                        bertScore: "BERT Score: 82%" 
+                        bertScore: "BERT Score: 82%",
+                        chart2Data: { labels: ["G", "H", "I"], values: [9, 16, 12] }
                     },
                     { 
                         headerValue: "Fair Pricing", 
                         text: "Age-based pricing for seats, such as movie tickets, raises questions about fairness and equality in customer experiences.", 
-                        bertScore: "BERT Score: 85%" 
+                        bertScore: "BERT Score: 85%",
+                        chart2Data: { labels: ["J", "K", "L"], values: [11, 19, 14] }
                     }
                 ],
-                chart1Data: { labels: ["X", "Y", "Z", "W"], values: [12, 18, 10, 25] },
-                chart2Data: { labels: ["P", "Q", "R", "S"], values: [20, 15, 18, 22] }
+                chart1Data: { labels: ["X", "Y", "Z", "W"], values: [12, 18, 10, 25] }
             }
         ];
 
@@ -205,10 +207,10 @@
         const chart2 = new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: datasets[0].chart2Data.labels,
+                labels: datasets[0].rewrittenTexts[0].chart2Data.labels,
                 datasets: [{
                     label: 'Values',
-                    data: datasets[0].chart2Data.values,
+                    data: datasets[0].rewrittenTexts[0].chart2Data.values,
                     backgroundColor: 'rgba(192, 75, 75, 0.2)',
                     borderColor: 'rgba(192, 75, 75, 1)',
                     borderWidth: 1
@@ -243,6 +245,11 @@
             document.getElementById('rewrittenHeader').innerText = `Rewritten Text: ${rewritten.headerValue}`;
             document.getElementById('bertScore').innerText = rewritten.bertScore;
             updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
+
+            // Update chart2 with the current rewritten text's chart data
+            chart2.data.labels = rewritten.chart2Data.labels;
+            chart2.data.datasets[0].data = rewritten.chart2Data.values;
+            chart2.update();
         }
 
         function updateTextWithDifferences(elementId, text1, text2) {

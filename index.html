@@ -84,6 +84,31 @@
             font-weight: bold;
             text-decoration: line-through;
         }
+        .plain-text-box {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+        .plain-text-box h3 {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            background-color: #fefefe;
+        }
+        textarea[readonly] {
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
@@ -119,54 +144,45 @@
         <span class="arrow" onclick="navigate(1)">Next Topic &#8594;</span>
     </div>
 
+    <div class="plain-text-box">
+        <h3>Rewritten Text (Plain)</h3>
+        <textarea id="plainTextBox" readonly></textarea>
+    </div>
+
     <script>
         let datasets = [];
         let currentIndex = 0;
-    
+
         const chart1 = new Chart(document.getElementById('chart1').getContext('2d'), {
             type: 'bar',
             data: {},
             options: {
                 indexAxis: 'y',
                 plugins: {
-                    legend: {
-                        display: false // Removes the legend
-                    }
+                    legend: { display: false }
                 },
                 scales: {
-                    x: {
-                        beginAtZero: true,
-                        grid: { display: false } // Removes gridlines for the x-axis
-                    },
-                    y: {
-                        grid: { display: false } // Removes gridlines for the y-axis
-                    }
+                    x: { beginAtZero: true, grid: { display: false } },
+                    y: { grid: { display: false } }
                 }
             }
         });
-    
+
         const chart2 = new Chart(document.getElementById('chart2').getContext('2d'), {
             type: 'bar',
             data: {},
             options: {
                 indexAxis: 'y',
                 plugins: {
-                    legend: {
-                        display: false // Removes the legend
-                    }
+                    legend: { display: false }
                 },
                 scales: {
-                    x: {
-                        beginAtZero: true,
-                        grid: { display: false } // Removes gridlines for the x-axis
-                    },
-                    y: {
-                        grid: { display: false } // Removes gridlines for the y-axis
-                    }
+                    x: { beginAtZero: true, grid: { display: false } },
+                    y: { grid: { display: false } }
                 }
             }
         });
-    
+
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
@@ -175,7 +191,7 @@
                 navigate(0);
             })
             .catch(error => console.error('Error loading data:', error));
-    
+
         function navigate(direction) {
             if (datasets.length === 0) return;
             currentIndex = (currentIndex + direction + datasets.length) % datasets.length;
@@ -184,20 +200,22 @@
             document.getElementById('inputText').innerText = data.inputText || 'No text provided';
             updateRewrittenText(data);
         }
-    
+
         function updateRewrittenText(data) {
             const rewritten = data.rewrittenTexts[0]; // Get the single rewritten text
             if (!rewritten) {
                 document.getElementById('rewrittenText').innerText = 'No rewritten text available';
+                document.getElementById('plainTextBox').value = 'No rewritten text available';
                 document.getElementById('bertScore').innerText = 'BERT Score: N/A';
                 chart2.data = { labels: [], datasets: [] };
                 chart2.update();
                 return;
             }
-    
+
             document.getElementById('bertScore').innerText = rewritten.bertScore || 'BERT Score: N/A';
             updateTextWithDifferences('rewrittenText', data.inputText || '', rewritten.text || '');
-    
+            document.getElementById('plainTextBox').value = rewritten.text || '';
+
             chart1.data = {
                 labels: data.chart1Data.labels || [],
                 datasets: [{
@@ -208,7 +226,7 @@
                 }]
             };
             chart1.update();
-    
+
             chart2.data = {
                 labels: rewritten.chart2Data.labels || [],
                 datasets: [{
@@ -220,7 +238,7 @@
             };
             chart2.update();
         }
-    
+
         function updateTextWithDifferences(elementId, text1, text2) {
             const diff = Diff.diffWords(text1, text2);
             const element = document.getElementById(elementId);
@@ -230,7 +248,5 @@
             }).join('');
         }
     </script>
-
-
 </body>
 </html>

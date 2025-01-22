@@ -1,6 +1,6 @@
 [
     {
-        "topic": "Topic: Is the school uniform a good or bad idea",
+        "topic": "Topic: Is the school uniform a good or bad idea:",
         "inputText": "students should wear what they like and feel free about their clothes",
         "chart1Data": {
             "labels": [
@@ -36,47 +36,50 @@
                 0.13077898
             ]
         },
-        "rewrittenTexts": {
-            "text": "While personal freedom in clothing choices is essential for fostering individuality among students, it is equally important to implement a balanced dress code policy that respects the diversity of personal expression while maintaining the standards of decorum and cohesion necessary for an effective educational setting.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.02696021,
-                    0.01777976,
-                    0.0202033,
-                    0.01725437,
-                    0.03218182,
-                    0.04242352,
-                    0.02681524,
-                    0.03036536,
-                    0.02757285,
-                    0.02766332,
-                    0.03490655,
-                    0.02887914,
-                    0.0319043,
-                    0.04515011
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "While personal freedom in clothing choices is essential for fostering individuality among students, it is equally important to implement a balanced dress code policy that respects the diversity of personal expression while maintaining the standards of decorum and cohesion necessary for an effective educational setting.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.02696021,
+                        0.01777976,
+                        0.0202033,
+                        0.01725437,
+                        0.03218182,
+                        0.04242352,
+                        0.02681524,
+                        0.03036536,
+                        0.02757285,
+                        0.02766332,
+                        0.03490655,
+                        0.02887914,
+                        0.0319043,
+                        0.04515011
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Tv is better than books",
+        "topic": "Topic: Tv is better than books:",
         "inputText": "I thick that book are better than TV is it is better i can put you in a whole norther wold and it is educational",
         "chart1Data": {
             "labels": [
@@ -112,47 +115,50 @@
                 0.6654743
             ]
         },
-        "rewrittenTexts": {
-            "text": "There's a notion\u2014one which I wholeheartedly endorse\u2014that books surpass television in offering educational enrichment. Undeniably, through the pages of a book, one can embark on a transformative journey to the far reaches of the Northern wilderness or to any place where the mind can soar unfettered.",
-            "bertScore": "BERT Score: 0.84",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.24667774,
-                    0.02208384,
-                    0.02803521,
-                    0.01896968,
-                    0.1048533,
-                    0.03401592,
-                    0.13036625,
-                    0.19772725,
-                    0.17437972,
-                    0.16860081,
-                    0.06406102,
-                    0.03844603,
-                    0.01731206,
-                    0.06383471
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "There's a notion\u2014one which I wholeheartedly endorse\u2014that books surpass television in offering educational enrichment. Undeniably, through the pages of a book, one can embark on a transformative journey to the far reaches of the Northern wilderness or to any place where the mind can soar unfettered.",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.24667774,
+                        0.02208384,
+                        0.02803521,
+                        0.01896968,
+                        0.1048533,
+                        0.03401592,
+                        0.13036625,
+                        0.19772725,
+                        0.17437972,
+                        0.16860081,
+                        0.06406102,
+                        0.03844603,
+                        0.01731206,
+                        0.06383471
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Tv is better than books",
+        "topic": "Topic: Tv is better than books:",
         "inputText": "Books enlighten the soul. Books don't destroy the morals of children. Books throw the mind into a series of questions, they take the readers to mystical places, paradise, and even the kitchen sink. They change your perspective on life and often give the reader a sense of relativity. Television is like a drug. It's as bad as nicotine. Fahrenheit 451, the Night Circus, The Secret Garden, Inkheart... Do I have to further explain..?",
         "chart1Data": {
             "labels": [
@@ -188,47 +194,50 @@
                 0.01197605
             ]
         },
-        "rewrittenTexts": {
-            "text": "Literature often serves as a guide for the mind and soul, igniting wonder and empathy within readers. It challenges young minds to explore different scenarios and discussions without compromising their core values. This form of storytelling effectively broadens our worldviews and helps us understand diverse perspectives, capturing the essence of the transformative power books hold over society. Films and television offer alternative modes of engaging with narratives, requiring us to be mindful of their content due to their pervasive influence on social attitudes. Prominent works, such as \"Fahrenheit 451\" (\"The Fire Engineer's Boy\" in its original title), \"The Night Circus,\" \"The Secret Garden,\" and \"Inkheart,\" exemplify the depth of character and storytelling that literary works provide, inviting readers to reflect deeply on life and themselves.",
-            "bertScore": "BERT Score: 0.86",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.0321106,
-                    0.01798201,
-                    0.0189514,
-                    0.01744759,
-                    0.03288958,
-                    0.03020087,
-                    0.02643605,
-                    0.03084412,
-                    0.02928625,
-                    0.02980416,
-                    0.03877037,
-                    0.03088744,
-                    0.03267923,
-                    0.04043083
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Literature often serves as a guide for the mind and soul, igniting wonder and empathy within readers. It challenges young minds to explore different scenarios and discussions without compromising their core values. This form of storytelling effectively broadens our worldviews and helps us understand diverse perspectives, capturing the essence of the transformative power books hold over society. Films and television offer alternative modes of engaging with narratives, requiring us to be mindful of their content due to their pervasive influence on social attitudes. Prominent works, such as \"Fahrenheit 451\" (\"The Fire Engineer's Boy\" in its original title), \"The Night Circus,\" \"The Secret Garden,\" and \"Inkheart,\" exemplify the depth of character and storytelling that literary works provide, inviting readers to reflect deeply on life and themselves.",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.0321106,
+                        0.01798201,
+                        0.0189514,
+                        0.01744759,
+                        0.03288958,
+                        0.03020087,
+                        0.02643605,
+                        0.03084412,
+                        0.02928625,
+                        0.02980416,
+                        0.03877037,
+                        0.03088744,
+                        0.03267923,
+                        0.04043083
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "india is is good adopter but a bad developer and leader should be a great developer",
         "chart1Data": {
             "labels": [
@@ -264,47 +273,50 @@
                 0.8373973
             ]
         },
-        "rewrittenTexts": {
-            "text": "India may excel as an adoptor of various trends and technologies, yet its leaders should not settle for becoming adopters alone. They need to also be exemplary developers crafting long-term, innovative solutions tailored for the nation.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.05401179,
-                    0.01408748,
-                    0.0150667,
-                    0.01344425,
-                    0.03792031,
-                    0.03451384,
-                    0.02880338,
-                    0.07379993,
-                    0.05421431,
-                    0.04150683,
-                    0.07097433,
-                    0.04260789,
-                    0.02118141,
-                    0.06747792
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "India may excel as an adoptor of various trends and technologies, yet its leaders should not settle for becoming adopters alone. They need to also be exemplary developers crafting long-term, innovative solutions tailored for the nation.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.05401179,
+                        0.01408748,
+                        0.0150667,
+                        0.01344425,
+                        0.03792031,
+                        0.03451384,
+                        0.02880338,
+                        0.07379993,
+                        0.05421431,
+                        0.04150683,
+                        0.07097433,
+                        0.04260789,
+                        0.02118141,
+                        0.06747792
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: William farquhar ought to be honoured as the rightful founder of singapore",
+        "topic": "Topic: William farquhar ought to be honoured as the rightful founder of singapore:",
         "inputText": "Raffles had written his discovery wrongly as 29 February 1819.It was later corrected. He thought he had discovered Singapore on his firs journey",
         "chart1Data": {
             "labels": [
@@ -340,47 +352,50 @@
                 0.5577581
             ]
         },
-        "rewrittenTexts": {
-            "text": "Raffles initially mistakenly notated his discovery of Singapore on what was meant to be 29 February. Subsequent corrections revealed his initial visit, where he indeed came upon the island.",
-            "bertScore": "BERT Score: 0.90",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.10469423,
-                    0.01013981,
-                    0.01010254,
-                    0.01053561,
-                    0.02958625,
-                    0.02956169,
-                    0.03032419,
-                    0.19085988,
-                    0.17823853,
-                    0.1446065,
-                    0.04809653,
-                    0.05977517,
-                    0.02806994,
-                    0.10782874
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Raffles initially mistakenly notated his discovery of Singapore on what was meant to be 29 February. Subsequent corrections revealed his initial visit, where he indeed came upon the island.",
+                "bertScore": "BERT Score: 0.90",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.10469423,
+                        0.01013981,
+                        0.01010254,
+                        0.01053561,
+                        0.02958625,
+                        0.02956169,
+                        0.03032419,
+                        0.19085988,
+                        0.17823853,
+                        0.1446065,
+                        0.04809653,
+                        0.05977517,
+                        0.02806994,
+                        0.10782874
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Evolution vs creation",
+        "topic": "Topic: Evolution vs creation:",
         "inputText": "I am a nurse and the more I studied biology, the more I was in awe of the miracle of our bodies. Every tiny cell has it's own design that is even more complex than a computer. When you look at a computer do you question that there had to be a creator? Or do you need proof that this highly organized machine came to be about by a mere accident or order of circumstances? Evolutionists need more faith than Creationists.",
         "chart1Data": {
             "labels": [
@@ -416,47 +431,50 @@
                 0.21444328
             ]
         },
-        "rewrittenTexts": {
-            "text": "I am a registered nurse and my deep engagement with human anatomy and physiology has further magnified the wonder of our biological systems. Each microscopic cell functions with an intricate complexity, reminiscent of a meticulously coded software unit\u2014though not as perfectly orchestrated, given the occasional randomness or mutation encountered in nature. Observing sophisticated systems like computers invites reflection on their seeming engineering; akin to this, our body's biological machinery naturally bears scrutiny.",
-            "bertScore": "BERT Score: 0.87",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.06514522,
-                    0.0148117,
-                    0.01289278,
-                    0.0140313,
-                    0.04037281,
-                    0.01776119,
-                    0.04161644,
-                    0.08423985,
-                    0.07554828,
-                    0.07035878,
-                    0.03784216,
-                    0.03375757,
-                    0.02063454,
-                    0.06139951
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "I am a registered nurse and my deep engagement with human anatomy and physiology has further magnified the wonder of our biological systems. Each microscopic cell functions with an intricate complexity, reminiscent of a meticulously coded software unit\u2014though not as perfectly orchestrated, given the occasional randomness or mutation encountered in nature. Observing sophisticated systems like computers invites reflection on their seeming engineering; akin to this, our body's biological machinery naturally bears scrutiny.",
+                "bertScore": "BERT Score: 0.87",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.06514522,
+                        0.0148117,
+                        0.01289278,
+                        0.0140313,
+                        0.04037281,
+                        0.01776119,
+                        0.04161644,
+                        0.08423985,
+                        0.07554828,
+                        0.07035878,
+                        0.03784216,
+                        0.03375757,
+                        0.02063454,
+                        0.06139951
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Is porn wrong",
+        "topic": "Topic: Is porn wrong:",
         "inputText": "Porn isn't inherently wrong because It really can't substantially harm anyone who isn't involved in it by choice.It really is just as simple as that.",
         "chart1Data": {
             "labels": [
@@ -492,47 +510,50 @@
                 0.02272356
             ]
         },
-        "rewrittenTexts": {
-            "text": "The consumption of pornography, when it involves informed and willing participants, does not in itself constitute intrinsic ethical transgression. This delicate matter centers around the principles of consent and agency, wherein activities are undertaken with full cognizance and without coercion. However, the ethical landscape is multifaceted. The proliferation of pornography raises complex questions regarding its impact on societal constructs of sexuality, individual behavior, and expectations. The ease of access and broad availability may also lead to complications such as the perpetuation of unrealistic body standards, potential desensitization to sexual stimuli, and the blurring of consent lines in everyday sexual encounters. It is imperative that discussions concerning pornography remain well-rounded, acknowledging both its role in providing a medium for explicit exploration among consenting adults and its potential ramifications within broader cultural and social contexts.",
-            "bertScore": "BERT Score: 0.82",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.0893122,
-                    0.01614068,
-                    0.01345703,
-                    0.01735375,
-                    0.05599759,
-                    0.02073716,
-                    0.07296284,
-                    0.08629057,
-                    0.06350198,
-                    0.08297288,
-                    0.0266392,
-                    0.02189598,
-                    0.01504452,
-                    0.03144811
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "The consumption of pornography, when it involves informed and willing participants, does not in itself constitute intrinsic ethical transgression. This delicate matter centers around the principles of consent and agency, wherein activities are undertaken with full cognizance and without coercion. However, the ethical landscape is multifaceted. The proliferation of pornography raises complex questions regarding its impact on societal constructs of sexuality, individual behavior, and expectations. The ease of access and broad availability may also lead to complications such as the perpetuation of unrealistic body standards, potential desensitization to sexual stimuli, and the blurring of consent lines in everyday sexual encounters. It is imperative that discussions concerning pornography remain well-rounded, acknowledging both its role in providing a medium for explicit exploration among consenting adults and its potential ramifications within broader cultural and social contexts.",
+                "bertScore": "BERT Score: 0.82",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.0893122,
+                        0.01614068,
+                        0.01345703,
+                        0.01735375,
+                        0.05599759,
+                        0.02073716,
+                        0.07296284,
+                        0.08629057,
+                        0.06350198,
+                        0.08297288,
+                        0.0266392,
+                        0.02189598,
+                        0.01504452,
+                        0.03144811
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Ban plastic water bottles",
+        "topic": "Topic: Ban plastic water bottles:",
         "inputText": "there aint no sunshine without plastic water bottles. only darkness everyday.",
         "chart1Data": {
             "labels": [
@@ -568,47 +589,50 @@
                 0.9445703
             ]
         },
-        "rewrittenTexts": {
-            "text": "Watching plastic water bottles disappear transforms sunshine into shadows, casting a day without light.",
-            "bertScore": "BERT Score: 0.89",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.8061704,
-                    0.03816823,
-                    0.0267625,
-                    0.02488003,
-                    0.14832978,
-                    0.12999946,
-                    0.1970013,
-                    0.93362653,
-                    0.8707379,
-                    0.7587146,
-                    0.86199635,
-                    0.3659596,
-                    0.08527083,
-                    0.5771946
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Watching plastic water bottles disappear transforms sunshine into shadows, casting a day without light.",
+                "bertScore": "BERT Score: 0.89",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8061704,
+                        0.03816823,
+                        0.0267625,
+                        0.02488003,
+                        0.14832978,
+                        0.12999946,
+                        0.1970013,
+                        0.93362653,
+                        0.8707379,
+                        0.7587146,
+                        0.86199635,
+                        0.3659596,
+                        0.08527083,
+                        0.5771946
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "how can Indians say that india don not have the potential to lead the world???????????????\r\nIndia is the heaven in the Earth and only India have the potential to lead the world..........\r\nBelieve yourself and hardwork.............\r\nsurely INDIA WILL BECOME POTENTIAL TO LEAD THE WORLD other-than any country!!!!!!!!!!!!\r\nJAI HIND",
         "chart1Data": {
             "labels": [
@@ -644,47 +668,50 @@
                 0.33993867
             ]
         },
-        "rewrittenTexts": {
-            "text": "\"How can citizens of India assert that India lacks the capability to lead the global stage? India is an unparalleled land, poised with the potential to shape a prosperous future for the world. How can one overlook the sincere determination and diligence displayed by the people of this nation?\"",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.77343726,
-                    0.03414073,
-                    0.05224703,
-                    0.03337769,
-                    0.2211131,
-                    0.05832399,
-                    0.29041663,
-                    0.90537304,
-                    0.87401146,
-                    0.6813239,
-                    0.46820426,
-                    0.08412017,
-                    0.01907327,
-                    0.29585567
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "\"How can citizens of India assert that India lacks the capability to lead the global stage? India is an unparalleled land, poised with the potential to shape a prosperous future for the world. How can one overlook the sincere determination and diligence displayed by the people of this nation?\"",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.77343726,
+                        0.03414073,
+                        0.05224703,
+                        0.03337769,
+                        0.2211131,
+                        0.05832399,
+                        0.29041663,
+                        0.90537304,
+                        0.87401146,
+                        0.6813239,
+                        0.46820426,
+                        0.08412017,
+                        0.01907327,
+                        0.29585567
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "The government has no place to tell a woman what she can do with her own body, ever.\r\nThe government DOES have that right.\r\n1) a woman cannot legally prostitute herself in many states\r\n2) a woman cannot take illicit drugs into her own body\r\n3) a woman cannot use her body to murder others\r\n4) a woman cannot use her body to steal\r\n5) a woman cannot display her naked body in public\r\nthere are many others. Men can also not do these things.\r\nThe government tells us what to do with our bodies ALL THE TIME. This is no different.",
         "chart1Data": {
             "labels": [
@@ -720,47 +747,50 @@
                 0.01250468
             ]
         },
-        "rewrittenTexts": {
-            "text": "Government interference extends far beyond the contentious realm of reproductive rights. It infringes upon personal liberties in various forms, posing a continuous threat to individual autonomy. While the intention of certain regulations may stem from well-meaning motives, expansive government overreach resides in its capacity to dictate how a person should or shouldn't live. Myriad areas of personal agency are obfuscated by these overarching impositions. ",
-            "bertScore": "BERT Score: 0.82",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.77030534,
-                    0.17938544,
-                    0.10004028,
-                    0.1434466,
-                    0.48532265,
-                    0.0176387,
-                    0.55122733,
-                    0.42170334,
-                    0.2791651,
-                    0.4160813,
-                    0.0408342,
-                    0.01393431,
-                    0.00595342,
-                    0.04260841
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Government interference extends far beyond the contentious realm of reproductive rights. It infringes upon personal liberties in various forms, posing a continuous threat to individual autonomy. While the intention of certain regulations may stem from well-meaning motives, expansive government overreach resides in its capacity to dictate how a person should or shouldn't live. Myriad areas of personal agency are obfuscated by these overarching impositions. ",
+                "bertScore": "BERT Score: 0.82",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.77030534,
+                        0.17938544,
+                        0.10004028,
+                        0.1434466,
+                        0.48532265,
+                        0.0176387,
+                        0.55122733,
+                        0.42170334,
+                        0.2791651,
+                        0.4160813,
+                        0.0408342,
+                        0.01393431,
+                        0.00595342,
+                        0.04260841
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Is the school uniform a good or bad idea",
+        "topic": "Topic: Is the school uniform a good or bad idea:",
         "inputText": "students should wear what they like and feel free about their clothes",
         "chart1Data": {
             "labels": [
@@ -796,47 +826,50 @@
                 0.13077898
             ]
         },
-        "rewrittenTexts": {
-            "text": "Reimagining the argument with a focus on individualism and professionalism while respecting school guidelines and promoting student choice entails advocating for personal expression in clothing choices within the limits of the educational institution's dress code.",
-            "bertScore": "BERT Score: 0.86",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.08649252,
-                    0.0111652,
-                    0.01075671,
-                    0.01024062,
-                    0.0426108,
-                    0.03209197,
-                    0.03158676,
-                    0.10921386,
-                    0.11852816,
-                    0.07582121,
-                    0.08945327,
-                    0.03317948,
-                    0.02039572,
-                    0.02934265
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Reimagining the argument with a focus on individualism and professionalism while respecting school guidelines and promoting student choice entails advocating for personal expression in clothing choices within the limits of the educational institution's dress code.",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.08649252,
+                        0.0111652,
+                        0.01075671,
+                        0.01024062,
+                        0.0426108,
+                        0.03209197,
+                        0.03158676,
+                        0.10921386,
+                        0.11852816,
+                        0.07582121,
+                        0.08945327,
+                        0.03317948,
+                        0.02039572,
+                        0.02934265
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Tv is better than books",
+        "topic": "Topic: Tv is better than books:",
         "inputText": "I thick that book are better than TV is it is better i can put you in a whole norther wold and it is educational",
         "chart1Data": {
             "labels": [
@@ -872,47 +905,50 @@
                 0.6654743
             ]
         },
-        "rewrittenTexts": {
-            "text": "Books, akin to their televisual counterpoints, each serve distinct functions; while TV possesses undeniable entertainment merit, books offer an incomparably rich tapestry of cognitive rewards. They transport us to myriad settings, like slipping into a Winter North realm, and enrich us not just visually but intellectually, fostering retention and deepened understanding.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.04512076,
-                    0.02235579,
-                    0.02266048,
-                    0.02123976,
-                    0.04920346,
-                    0.03533516,
-                    0.05079128,
-                    0.02610934,
-                    0.02779611,
-                    0.03269156,
-                    0.02312114,
-                    0.02779034,
-                    0.02499387,
-                    0.04401898
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Books, akin to their televisual counterpoints, each serve distinct functions; while TV possesses undeniable entertainment merit, books offer an incomparably rich tapestry of cognitive rewards. They transport us to myriad settings, like slipping into a Winter North realm, and enrich us not just visually but intellectually, fostering retention and deepened understanding.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.04512076,
+                        0.02235579,
+                        0.02266048,
+                        0.02123976,
+                        0.04920346,
+                        0.03533516,
+                        0.05079128,
+                        0.02610934,
+                        0.02779611,
+                        0.03269156,
+                        0.02312114,
+                        0.02779034,
+                        0.02499387,
+                        0.04401898
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Tv is better than books",
+        "topic": "Topic: Tv is better than books:",
         "inputText": "Books enlighten the soul. Books don't destroy the morals of children. Books throw the mind into a series of questions, they take the readers to mystical places, paradise, and even the kitchen sink. They change your perspective on life and often give the reader a sense of relativity. Television is like a drug. It's as bad as nicotine. Fahrenheit 451, the Night Circus, The Secret Garden, Inkheart... Do I have to further explain..?",
         "chart1Data": {
             "labels": [
@@ -948,47 +984,50 @@
                 0.01197605
             ]
         },
-        "rewrittenTexts": {
-            "text": "Books illuminate the depths of consciousness, cultivating virtues rather than corrupting innocence. They ignite the flame of inquiry, transporting one through enchanted realms, from utopias to the mundane, embracing universal truths. Television, while a companionable spectacle, wields influence, akin to another potent stimulant. Masterworks like Fahrenheit 451 unravel the consequences of ignorance, while the Night Circus weaves a tale of ethereal allure, The Secret Garden breathes magic into the pastoral, and Inkheart conjures a world limited only by the imagination. These narratives stand as monuments to the transformative power of words, fostering reflection and wonder, equal in measure to the vivid landscapes television paints, albeit within distinct canvases of engagement.",
-            "bertScore": "BERT Score: 0.86",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.16246434,
-                    0.02953066,
-                    0.02674888,
-                    0.02858804,
-                    0.08567671,
-                    0.01774713,
-                    0.0881578,
-                    0.07450742,
-                    0.06669696,
-                    0.08684919,
-                    0.03160284,
-                    0.02565594,
-                    0.01903035,
-                    0.04114657
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Books illuminate the depths of consciousness, cultivating virtues rather than corrupting innocence. They ignite the flame of inquiry, transporting one through enchanted realms, from utopias to the mundane, embracing universal truths. Television, while a companionable spectacle, wields influence, akin to another potent stimulant. Masterworks like Fahrenheit 451 unravel the consequences of ignorance, while the Night Circus weaves a tale of ethereal allure, The Secret Garden breathes magic into the pastoral, and Inkheart conjures a world limited only by the imagination. These narratives stand as monuments to the transformative power of words, fostering reflection and wonder, equal in measure to the vivid landscapes television paints, albeit within distinct canvases of engagement.",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.16246434,
+                        0.02953066,
+                        0.02674888,
+                        0.02858804,
+                        0.08567671,
+                        0.01774713,
+                        0.0881578,
+                        0.07450742,
+                        0.06669696,
+                        0.08684919,
+                        0.03160284,
+                        0.02565594,
+                        0.01903035,
+                        0.04114657
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "india is is good adopter but a bad developer and leader should be a great developer",
         "chart1Data": {
             "labels": [
@@ -1024,47 +1063,50 @@
                 0.8373973
             ]
         },
-        "rewrittenTexts": {
-            "text": "In the context of emerging economies, India stands out as a promising nation in development and leadership.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.13500251,
-                    0.0146831,
-                    0.01029513,
-                    0.01457158,
-                    0.04245242,
-                    0.04597122,
-                    0.04073828,
-                    0.3601874,
-                    0.28271964,
-                    0.23178278,
-                    0.16163592,
-                    0.0535215,
-                    0.01724197,
-                    0.09561136
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "In the context of emerging economies, India stands out as a promising nation in development and leadership.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.13500251,
+                        0.0146831,
+                        0.01029513,
+                        0.01457158,
+                        0.04245242,
+                        0.04597122,
+                        0.04073828,
+                        0.3601874,
+                        0.28271964,
+                        0.23178278,
+                        0.16163592,
+                        0.0535215,
+                        0.01724197,
+                        0.09561136
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: William farquhar ought to be honoured as the rightful founder of singapore",
+        "topic": "Topic: William farquhar ought to be honoured as the rightful founder of singapore:",
         "inputText": "Raffles had written his discovery wrongly as 29 February 1819.It was later corrected. He thought he had discovered Singapore on his firs journey",
         "chart1Data": {
             "labels": [
@@ -1100,47 +1142,50 @@
                 0.5577581
             ]
         },
-        "rewrittenTexts": {
-            "text": "Raffles, upon his initial voyage, correctly recorded Singapore's discovery as 27 January 1819. However, a subsequent correction revealed his initial miscalculation, where he corresponded to the year 1819, but the precise date was adhered to originally as per his second journey's account.",
-            "bertScore": "BERT Score: 0.90",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.04520027,
-                    0.01168908,
-                    0.01160587,
-                    0.01057176,
-                    0.02390997,
-                    0.02739413,
-                    0.02498867,
-                    0.07812434,
-                    0.06807644,
-                    0.06324192,
-                    0.03824011,
-                    0.04347291,
-                    0.03467144,
-                    0.06757309
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Raffles, upon his initial voyage, correctly recorded Singapore's discovery as 27 January 1819. However, a subsequent correction revealed his initial miscalculation, where he corresponded to the year 1819, but the precise date was adhered to originally as per his second journey's account.",
+                "bertScore": "BERT Score: 0.90",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.04520027,
+                        0.01168908,
+                        0.01160587,
+                        0.01057176,
+                        0.02390997,
+                        0.02739413,
+                        0.02498867,
+                        0.07812434,
+                        0.06807644,
+                        0.06324192,
+                        0.03824011,
+                        0.04347291,
+                        0.03467144,
+                        0.06757309
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Evolution vs creation",
+        "topic": "Topic: Evolution vs creation:",
         "inputText": "I am a nurse and the more I studied biology, the more I was in awe of the miracle of our bodies. Every tiny cell has it's own design that is even more complex than a computer. When you look at a computer do you question that there had to be a creator? Or do you need proof that this highly organized machine came to be about by a mere accident or order of circumstances? Evolutionists need more faith than Creationists.",
         "chart1Data": {
             "labels": [
@@ -1176,47 +1221,50 @@
                 0.21444328
             ]
         },
-        "rewrittenTexts": {
-            "text": "As a healthcare professional, my foray into the depths of biology has only served to magnify my profound admiration for the intricacies of the human body. Each microscopic cell, a universe of its own compartmentalized and meticulously organized, arouses wonder akin to marveling at the most sophisticated of computers. Yet, when you gaze upon a computer's complexity, you seldom entertain the notion that creation's spark ignited this marvel\u2014the proof is in common observation rather than hypothesis. Contrastingly, those who argue evolution as the hand guiding life often find themselves marshaling faith, not unlike my observations as a caregiver who heals.",
-            "bertScore": "BERT Score: 0.87",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.9244343,
-                    0.13066918,
-                    0.08521076,
-                    0.09584527,
-                    0.47484446,
-                    0.00926547,
-                    0.57706517,
-                    0.9361966,
-                    0.83600754,
-                    0.86192614,
-                    0.34707472,
-                    0.05443238,
-                    0.01599627,
-                    0.14109199
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "As a healthcare professional, my foray into the depths of biology has only served to magnify my profound admiration for the intricacies of the human body. Each microscopic cell, a universe of its own compartmentalized and meticulously organized, arouses wonder akin to marveling at the most sophisticated of computers. Yet, when you gaze upon a computer's complexity, you seldom entertain the notion that creation's spark ignited this marvel\u2014the proof is in common observation rather than hypothesis. Contrastingly, those who argue evolution as the hand guiding life often find themselves marshaling faith, not unlike my observations as a caregiver who heals.",
+                "bertScore": "BERT Score: 0.87",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9244343,
+                        0.13066918,
+                        0.08521076,
+                        0.09584527,
+                        0.47484446,
+                        0.00926547,
+                        0.57706517,
+                        0.9361966,
+                        0.83600754,
+                        0.86192614,
+                        0.34707472,
+                        0.05443238,
+                        0.01599627,
+                        0.14109199
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Is porn wrong",
+        "topic": "Topic: Is porn wrong:",
         "inputText": "Porn isn't inherently wrong because It really can't substantially harm anyone who isn't involved in it by choice.It really is just as simple as that.",
         "chart1Data": {
             "labels": [
@@ -1252,47 +1300,50 @@
                 0.02272356
             ]
         },
-        "rewrittenTexts": {
-            "text": "Adult entertainment, when consumed with consent, does not appear to pose a significant threat to individuals who actively seek it out. Its role in society should be acknowledged with an emphasis on consent and choice.",
-            "bertScore": "BERT Score: 0.86",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.06652863,
-                    0.01759688,
-                    0.01569616,
-                    0.01669078,
-                    0.05232564,
-                    0.02871222,
-                    0.05107354,
-                    0.06764379,
-                    0.06242298,
-                    0.05973225,
-                    0.0371965,
-                    0.02321529,
-                    0.01949245,
-                    0.02057099
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Adult entertainment, when consumed with consent, does not appear to pose a significant threat to individuals who actively seek it out. Its role in society should be acknowledged with an emphasis on consent and choice.",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.06652863,
+                        0.01759688,
+                        0.01569616,
+                        0.01669078,
+                        0.05232564,
+                        0.02871222,
+                        0.05107354,
+                        0.06764379,
+                        0.06242298,
+                        0.05973225,
+                        0.0371965,
+                        0.02321529,
+                        0.01949245,
+                        0.02057099
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Ban plastic water bottles",
+        "topic": "Topic: Ban plastic water bottles:",
         "inputText": "there aint no sunshine without plastic water bottles. only darkness everyday.",
         "chart1Data": {
             "labels": [
@@ -1328,47 +1379,50 @@
                 0.9445703
             ]
         },
-        "rewrittenTexts": {
-            "text": "To veil a tale of ecological harmony, one need not invoke the flawlessness of soft days; rather, it is within the stark revelation facilitated by sunlight that the dissonance between plastic bottles and the equilibrium of nature is laid bare.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.89525527,
-                    0.089515,
-                    0.05101903,
-                    0.04769573,
-                    0.3600177,
-                    0.05163144,
-                    0.3847735,
-                    0.9311325,
-                    0.82883275,
-                    0.7944456,
-                    0.5593408,
-                    0.14934972,
-                    0.02852269,
-                    0.35605448
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "To veil a tale of ecological harmony, one need not invoke the flawlessness of soft days; rather, it is within the stark revelation facilitated by sunlight that the dissonance between plastic bottles and the equilibrium of nature is laid bare.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.89525527,
+                        0.089515,
+                        0.05101903,
+                        0.04769573,
+                        0.3600177,
+                        0.05163144,
+                        0.3847735,
+                        0.9311325,
+                        0.82883275,
+                        0.7944456,
+                        0.5593408,
+                        0.14934972,
+                        0.02852269,
+                        0.35605448
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "how can Indians say that india don not have the potential to lead the world???????????????\r\nIndia is the heaven in the Earth and only India have the potential to lead the world..........\r\nBelieve yourself and hardwork.............\r\nsurely INDIA WILL BECOME POTENTIAL TO LEAD THE WORLD other-than any country!!!!!!!!!!!!\r\nJAI HIND",
         "chart1Data": {
             "labels": [
@@ -1404,47 +1458,50 @@
                 0.33993867
             ]
         },
-        "rewrittenTexts": {
-            "text": "How can people question India's potential to be the leader of the world given its greatness on Earth? India has the capability to lead the world uniquely. Believe in yourself and your hard work, for surely India will WILL become the pinnacle of global leadership without comparing it to any country! Jai Hind!",
-            "bertScore": "BERT Score: 0.88",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.83883303,
-                    0.16356742,
-                    0.12792595,
-                    0.08687952,
-                    0.6536508,
-                    0.15258797,
-                    0.6975446,
-                    0.59268814,
-                    0.5041623,
-                    0.25160694,
-                    0.18464246,
-                    0.01297493,
-                    0.00597754,
-                    0.02908622
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "How can people question India's potential to be the leader of the world given its greatness on Earth? India has the capability to lead the world uniquely. Believe in yourself and your hard work, for surely India will WILL become the pinnacle of global leadership without comparing it to any country! Jai Hind!",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.83883303,
+                        0.16356742,
+                        0.12792595,
+                        0.08687952,
+                        0.6536508,
+                        0.15258797,
+                        0.6975446,
+                        0.59268814,
+                        0.5041623,
+                        0.25160694,
+                        0.18464246,
+                        0.01297493,
+                        0.00597754,
+                        0.02908622
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "The government has no place to tell a woman what she can do with her own body, ever.\r\nThe government DOES have that right.\r\n1) a woman cannot legally prostitute herself in many states\r\n2) a woman cannot take illicit drugs into her own body\r\n3) a woman cannot use her body to murder others\r\n4) a woman cannot use her body to steal\r\n5) a woman cannot display her naked body in public\r\nthere are many others. Men can also not do these things.\r\nThe government tells us what to do with our bodies ALL THE TIME. This is no different.",
         "chart1Data": {
             "labels": [
@@ -1480,47 +1537,50 @@
                 0.01250468
             ]
         },
-        "rewrittenTexts": {
-            "text": "The government DOES have that right, and regulation must respect individual autonomy while ensuring public safety. For instance, age of consent laws protect those deemed incapable of making informed decisions. Drug-free workplace policies safeguard workforce health. Anti-rape laws protect bodily integrity. Intellectual property laws prevent the unauthorized use of bodily material. Public decency statutes balance freedom with community standards. Properly calibrated regulations aim for the ethical use of autonomy while maintaining respect for all individuals\u2019 rights and societal norms.",
-            "bertScore": "BERT Score: 0.82",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.0773302,
-                    0.01374975,
-                    0.00993378,
-                    0.01486218,
-                    0.03349563,
-                    0.02263323,
-                    0.03497332,
-                    0.10019245,
-                    0.06174251,
-                    0.08834887,
-                    0.07061138,
-                    0.03449067,
-                    0.01948709,
-                    0.0463145
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "The government DOES have that right, and regulation must respect individual autonomy while ensuring public safety. For instance, age of consent laws protect those deemed incapable of making informed decisions. Drug-free workplace policies safeguard workforce health. Anti-rape laws protect bodily integrity. Intellectual property laws prevent the unauthorized use of bodily material. Public decency statutes balance freedom with community standards. Properly calibrated regulations aim for the ethical use of autonomy while maintaining respect for all individuals\u2019 rights and societal norms.",
+                "bertScore": "BERT Score: 0.82",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.0773302,
+                        0.01374975,
+                        0.00993378,
+                        0.01486218,
+                        0.03349563,
+                        0.02263323,
+                        0.03497332,
+                        0.10019245,
+                        0.06174251,
+                        0.08834887,
+                        0.07061138,
+                        0.03449067,
+                        0.01948709,
+                        0.0463145
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "The only other choices are, adoption or keep it.\r\nAnd I know many children get adopted but many don't\r\nand it might be better off to just have an abortion to\r\nlet them suffer.\r\nThat's the chance they take, I guess. But who are we to\r\ndecide one womans pregnancy.",
         "chart1Data": {
             "labels": [
@@ -1556,47 +1616,50 @@
                 0.02579029
             ]
         },
-        "rewrittenTexts": {
-            "text": "The alternative choices are, adoption or keep it.\r",
-            "bertScore": "BERT Score: 0.88",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.8884317,
-                    0.05374103,
-                    0.04661579,
-                    0.02627588,
-                    0.48444697,
-                    0.23835333,
-                    0.37786132,
-                    0.95182955,
-                    0.8691181,
-                    0.7082359,
-                    0.9139288,
-                    0.21953341,
-                    0.025321,
-                    0.45127138
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "The alternative choices are, adoption or keep it.\r",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8884317,
+                        0.05374103,
+                        0.04661579,
+                        0.02627588,
+                        0.48444697,
+                        0.23835333,
+                        0.37786132,
+                        0.95182955,
+                        0.8691181,
+                        0.7082359,
+                        0.9139288,
+                        0.21953341,
+                        0.025321,
+                        0.45127138
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "Who are we to judge what is right or wrong? Can we not just let people make decisions and live with the consequences?",
         "chart1Data": {
             "labels": [
@@ -1632,47 +1695,50 @@
                 0.08934601
             ]
         },
-        "rewrittenTexts": {
-            "text": "In the realm of free will versus the fabric of societal values, the discourse often gravitates towards a cautious stance on scrutinizing individual choices. It bears asking, is it not beyond our reach to pass judgment on what right or wrong might be, leaving individuals at liberty to stride with their decisions, only to shoulder their outcomes?",
-            "bertScore": "BERT Score: 0.88",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.22994299,
-                    0.00975251,
-                    0.01032433,
-                    0.01156676,
-                    0.04494665,
-                    0.03155679,
-                    0.049794,
-                    0.46180636,
-                    0.45937946,
-                    0.25474516,
-                    0.19712102,
-                    0.03525556,
-                    0.01678199,
-                    0.08066894
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "In the realm of free will versus the fabric of societal values, the discourse often gravitates towards a cautious stance on scrutinizing individual choices. It bears asking, is it not beyond our reach to pass judgment on what right or wrong might be, leaving individuals at liberty to stride with their decisions, only to shoulder their outcomes?",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.22994299,
+                        0.00975251,
+                        0.01032433,
+                        0.01156676,
+                        0.04494665,
+                        0.03155679,
+                        0.049794,
+                        0.46180636,
+                        0.45937946,
+                        0.25474516,
+                        0.19712102,
+                        0.03525556,
+                        0.01678199,
+                        0.08066894
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "I am an American, and I am ashamed to admit \"Merica is rich due to slavery. India never had slavery and used to be rich until the British came and took everything away. We were left in a bad state, but started developing quickly. India is much more competitive in education than America and soon when everyone has education (which will happen in our lifetime) India will excel.\r\nIndia has the potential.",
         "chart1Data": {
             "labels": [
@@ -1708,47 +1774,50 @@
                 0.01448401
             ]
         },
-        "rewrittenTexts": {
-            "text": "Unifying the legacies of ancient civilizations like India and America can significantly contribute to an enriched global economic discourse, embracing shared historical knowledge for collective advancement. While America's journey toward prosperity has been tumultuous, honoring its complex history, we recognize India's storied accomplishments prior to colonial influence. India, renowned for its profound educational heritage, presents an opportunity for both nations to rally around the common goal of cultivating global educational excellence, thereby promoting intertwined growth and mutual respect in the rapidly evolving knowledge-based world.",
-            "bertScore": "BERT Score: 0.84",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.05832309,
-                    0.01597909,
-                    0.0132051,
-                    0.01461643,
-                    0.03410449,
-                    0.02305969,
-                    0.03621394,
-                    0.08594354,
-                    0.0777159,
-                    0.09059699,
-                    0.03704365,
-                    0.02788643,
-                    0.02085757,
-                    0.04392043
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Unifying the legacies of ancient civilizations like India and America can significantly contribute to an enriched global economic discourse, embracing shared historical knowledge for collective advancement. While America's journey toward prosperity has been tumultuous, honoring its complex history, we recognize India's storied accomplishments prior to colonial influence. India, renowned for its profound educational heritage, presents an opportunity for both nations to rally around the common goal of cultivating global educational excellence, thereby promoting intertwined growth and mutual respect in the rapidly evolving knowledge-based world.",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.05832309,
+                        0.01597909,
+                        0.0132051,
+                        0.01461643,
+                        0.03410449,
+                        0.02305969,
+                        0.03621394,
+                        0.08594354,
+                        0.0777159,
+                        0.09059699,
+                        0.03704365,
+                        0.02788643,
+                        0.02085757,
+                        0.04392043
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Cmv: i think abortion is an acceptable choice, and i think it's ridiculous that it's looked down upon.",
+        "topic": "Topic: Cmv: i think abortion is an acceptable choice, and i think it's ridiculous that it's looked down upon.:",
         "inputText": "All my life I've grown up around religious people, always telling me abortion was wrong, murder, and immoral. But I slowly realized, it's not really a fully formed human, how could it be murder? This never made any sense, it's someone's body, if they want to abort a pregnancy, let them. Don't shame them into having a baby based on religious views. Anyway, I'm rambling, but I'm interested to see other views on this, so go ahead and try to change my view. If it matters, I'm Christian, 16, and male.",
         "chart1Data": {
             "labels": [
@@ -1784,47 +1853,50 @@
                 0.03948821
             ]
         },
-        "rewrittenTexts": {
-            "text": "I've been surrounded by a community of religious individuals all my life who assert morning. Abortion is disapproved upon as an act of murder and immorality. Slowly, I've understood this belief system, recognizing that an abortion fetus isn't fully developed. The concept of murder didn't resonate with me in this context, seeing it as a person's physical entity. They should have the autonomy to make decisions concerning their pregnancy. The pressure to bear a child because of religious convictions misplaced is unnecessary.",
-            "bertScore": "BERT Score: 0.88",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.34095502,
-                    0.06160519,
-                    0.06788233,
-                    0.06750771,
-                    0.2006571,
-                    0.00873409,
-                    0.30436715,
-                    0.10583768,
-                    0.08749598,
-                    0.1395734,
-                    0.01578456,
-                    0.01500196,
-                    0.01171765,
-                    0.0343866
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "I've been surrounded by a community of religious individuals all my life who assert morning. Abortion is disapproved upon as an act of murder and immorality. Slowly, I've understood this belief system, recognizing that an abortion fetus isn't fully developed. The concept of murder didn't resonate with me in this context, seeing it as a person's physical entity. They should have the autonomy to make decisions concerning their pregnancy. The pressure to bear a child because of religious convictions misplaced is unnecessary.",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.34095502,
+                        0.06160519,
+                        0.06788233,
+                        0.06750771,
+                        0.2006571,
+                        0.00873409,
+                        0.30436715,
+                        0.10583768,
+                        0.08749598,
+                        0.1395734,
+                        0.01578456,
+                        0.01500196,
+                        0.01171765,
+                        0.0343866
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Cmv   i believe human civilization is doomed. *please* change my view.",
+        "topic": "Topic: Cmv   i believe human civilization is doomed. *please* change my view.:",
         "inputText": "Well, I hate to be a downer, guys, but I don't think humanity has another 100 years left (give or take a few years). I want to believe that things will be alright, but when you keep hearing worse and worse news about the environmental degradation of the planet (even if you are still somehow a climate-change denier, you have to admit the oceans are massively polluted and huge amounts of fish are dying, the air in some parts of the world like China is almost unbreathable and getting worse, etc.), it's hard to see humans coming out of this ok. I hate to say it, but I don't think we have another century left. Please tell me why I'm wrong.\r\n\r\nEdit: Just to be clear, I'm not talking about human extinction. We'll probably survive whatever happens to some degree. I mean I think that society will likely collapse. Humans may still be around, but in a Mad Max/The Road/Book of Eli type of existence. ",
         "chart1Data": {
             "labels": [
@@ -1860,47 +1932,50 @@
                 0.01455052
             ]
         },
-        "rewrittenTexts": {
-            "text": "Revision: While the optimism can be compelling, it's crucial to acknowledge the urgency of environmental issues that could reshape our societal structure significantly. It might be grim to address the present challenges regarding our planet's ecosystems, such as the increasing pollution and threat to marine life, compounded by compromised air quality. The state of our world's environment indeed feels dire, perhaps hinting at a potential for substantial upheaval. Let's continue the conversation, seek sustainable solutions, and understand each aspect of this complex issue to ensure that human progress aligns harmoniously with ecological preservation.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.07614707,
-                    0.01647341,
-                    0.01266525,
-                    0.01590048,
-                    0.04652181,
-                    0.02308137,
-                    0.04099322,
-                    0.08192185,
-                    0.08091485,
-                    0.06324084,
-                    0.04475753,
-                    0.0245338,
-                    0.01736157,
-                    0.03306675
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Revision: While the optimism can be compelling, it's crucial to acknowledge the urgency of environmental issues that could reshape our societal structure significantly. It might be grim to address the present challenges regarding our planet's ecosystems, such as the increasing pollution and threat to marine life, compounded by compromised air quality. The state of our world's environment indeed feels dire, perhaps hinting at a potential for substantial upheaval. Let's continue the conversation, seek sustainable solutions, and understand each aspect of this complex issue to ensure that human progress aligns harmoniously with ecological preservation.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.07614707,
+                        0.01647341,
+                        0.01266525,
+                        0.01590048,
+                        0.04652181,
+                        0.02308137,
+                        0.04099322,
+                        0.08192185,
+                        0.08091485,
+                        0.06324084,
+                        0.04475753,
+                        0.0245338,
+                        0.01736157,
+                        0.03306675
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Should you need to pass an iq test to have kids?   stance: dumb parents lead to more dumb kids.",
+        "topic": "Topic: Should you need to pass an iq test to have kids?   stance: dumb parents lead to more dumb kids.:",
         "inputText": "I have a strong opinion that before having children, the prospective parents should have to pass a series of background and IQ tests.\r\nKids being brought into this world need a good foundation to start a successful life with. You may have that limited case where the parents are morons and the kids strive to be different then their failure parents, but in most cases it is an endless line of parasites on our world.\r\nWe need more smart people.",
         "chart1Data": {
             "labels": [
@@ -1936,47 +2011,50 @@
                 0.05012373
             ]
         },
-        "rewrittenTexts": {
-            "text": "Enhanced Argument: I fervently believe that prior to embarking on the journey of parenting, potential parents should undergo comprehensive background and intelligence assessments. Our dedication to nurturing the future of our society has solidified this conviction within me. While offering children a promising start instills hope for their personal success, it's also important to recognize that the parental influence plays a pivotal role in their development. Exceptional parental guidance could sculpt a child into exceeding the societal norms, carving a path of innovation and progress. It's a conscious choice towards curating a community of competency and compassion, where children can flourish free from the shadows of inherited challenges. Striking this balance between evaluating parental potential and the discretion to welcome the children uniquely suited for them is crucial. It's not about filtering out the 'average'; it's about ensuring the zeal for intellectual and emotional betterment is shared generations down the line, shaping a more resilient and enlightened collective future.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.19193001,
-                    0.04049999,
-                    0.03715672,
-                    0.04325945,
-                    0.11348754,
-                    0.01495789,
-                    0.15053172,
-                    0.09285704,
-                    0.05625905,
-                    0.1044317,
-                    0.01499691,
-                    0.01583346,
-                    0.0128123,
-                    0.02798749
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Enhanced Argument: I fervently believe that prior to embarking on the journey of parenting, potential parents should undergo comprehensive background and intelligence assessments. Our dedication to nurturing the future of our society has solidified this conviction within me. While offering children a promising start instills hope for their personal success, it's also important to recognize that the parental influence plays a pivotal role in their development. Exceptional parental guidance could sculpt a child into exceeding the societal norms, carving a path of innovation and progress. It's a conscious choice towards curating a community of competency and compassion, where children can flourish free from the shadows of inherited challenges. Striking this balance between evaluating parental potential and the discretion to welcome the children uniquely suited for them is crucial. It's not about filtering out the 'average'; it's about ensuring the zeal for intellectual and emotional betterment is shared generations down the line, shaping a more resilient and enlightened collective future.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.19193001,
+                        0.04049999,
+                        0.03715672,
+                        0.04325945,
+                        0.11348754,
+                        0.01495789,
+                        0.15053172,
+                        0.09285704,
+                        0.05625905,
+                        0.1044317,
+                        0.01499691,
+                        0.01583346,
+                        0.0128123,
+                        0.02798749
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: India has the potential to lead the world",
+        "topic": "Topic: India has the potential to lead the world:",
         "inputText": "with the cream layer quota system i don't prefer india to be leading the world in near future.....\r\nyes india have the potential.. but corruption , this quota system ( not helpful to anyone) , and the main reason brain drain , don't specialy help india in the matter....",
         "chart1Data": {
             "labels": [
@@ -2012,47 +2090,50 @@
                 0.07576306
             ]
         },
-        "rewrittenTexts": {
-            "text": "with the cream layer scholarship system, my expectation is for India to take a more extended timeframe before becoming a global leader. India undeniably harbors potential; however, the issues of corruption and the existing quota system hinder the process. Additionally, the phenomenon of brain drain further complicates India's advancement.",
-            "bertScore": "BERT Score: 0.88",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.05314161,
-                    0.01897708,
-                    0.01783366,
-                    0.02242444,
-                    0.04798125,
-                    0.02516272,
-                    0.04909486,
-                    0.06139241,
-                    0.04190938,
-                    0.05974241,
-                    0.01966578,
-                    0.02256387,
-                    0.02047129,
-                    0.03906679
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "with the cream layer scholarship system, my expectation is for India to take a more extended timeframe before becoming a global leader. India undeniably harbors potential; however, the issues of corruption and the existing quota system hinder the process. Additionally, the phenomenon of brain drain further complicates India's advancement.",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.05314161,
+                        0.01897708,
+                        0.01783366,
+                        0.02242444,
+                        0.04798125,
+                        0.02516272,
+                        0.04909486,
+                        0.06139241,
+                        0.04190938,
+                        0.05974241,
+                        0.01966578,
+                        0.02256387,
+                        0.02047129,
+                        0.03906679
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "Sorry, one more thing:\r\nI think it's interesting that SINGTHESTORY and SIBTIGER haven't responded to my explanation of WHY I find adoption a less than desirable alternative to abortion....Funny how people just IGNORE what they can't or don't want to argue against.\r\nIf you're going to write a rebuttal to someone's argument on here, then click \"view all\" first. This gives you a history of their arguments and it may help to eliminate the need for that person to REPEAT themselves by addressing something they've already addressed.",
         "chart1Data": {
             "labels": [
@@ -2088,47 +2169,50 @@
                 0.0533788
             ]
         },
-        "rewrittenTexts": {
-            "text": "Apologies for any confusion, but I believe fostering comprehensive understanding is vital. Your assertion about SINGTHESTORY & SIBTIGER may be subjective. In academic dialogue, we consider relevant perspectives by examining each viewpoint's merits. Silence isn't a sign of our disagreement but a reflection of conscientiousness\u2014an invitation for further inquiries and perhaps, refinement of thought. Let's continue this discourse, each strive promoting respect, empathy, and open dialogue.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.10091271,
-                    0.01232545,
-                    0.01060385,
-                    0.01278888,
-                    0.04580395,
-                    0.01977489,
-                    0.04989099,
-                    0.15480824,
-                    0.1307349,
-                    0.13132954,
-                    0.03578217,
-                    0.02781675,
-                    0.018963,
-                    0.02900829
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Apologies for any confusion, but I believe fostering comprehensive understanding is vital. Your assertion about SINGTHESTORY & SIBTIGER may be subjective. In academic dialogue, we consider relevant perspectives by examining each viewpoint's merits. Silence isn't a sign of our disagreement but a reflection of conscientiousness\u2014an invitation for further inquiries and perhaps, refinement of thought. Let's continue this discourse, each strive promoting respect, empathy, and open dialogue.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.10091271,
+                        0.01232545,
+                        0.01060385,
+                        0.01278888,
+                        0.04580395,
+                        0.01977489,
+                        0.04989099,
+                        0.15480824,
+                        0.1307349,
+                        0.13132954,
+                        0.03578217,
+                        0.02781675,
+                        0.018963,
+                        0.02900829
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "A women and she alone is the one who should determine if she wants an abortion or not, at any stage of her pregnancy. Why is that it is mostly older white men who are attempting to establish anti-abortion laws for women? Why is it that most anit-abortionists are pro-death penalty?\r\nJon Jax 71",
         "chart1Data": {
             "labels": [
@@ -2164,47 +2248,50 @@
                 0.31681255
             ]
         },
-        "rewrittenTexts": {
-            "text": "To critically analyze the juxtaposition of antiabortion advocacy and prodeath penalty support is to delve into a complex intersection of moral and social priorities. It is noteworthy that it seems more men, typically from older and white demographics, tend to shape antiabortion legislation, while a parallel inclination toward endorsing capital punishment appears prevalent among similar groups. While both positions are draconian with life-and-death implications, they converge on a fundamental conflict with individual autonomy equally, albeit in distinct realms\u2014the debate over reproductive rights versus the discourse on criminal justice. It is essential to approach these justifications with a critical eye, bearing in mind their inherently vilifying stance on personal choice. Engaging in this discourse requires a balance of respect for differing viewpoints while not straying from critical scrutiny of policies that broadly curtail individual rights.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.39762643,
-                    0.08784214,
-                    0.06203299,
-                    0.08974565,
-                    0.29738936,
-                    0.00876638,
-                    0.35138994,
-                    0.13425097,
-                    0.1019112,
-                    0.19614919,
-                    0.01743749,
-                    0.01661893,
-                    0.01067898,
-                    0.05549257
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "To critically analyze the juxtaposition of antiabortion advocacy and prodeath penalty support is to delve into a complex intersection of moral and social priorities. It is noteworthy that it seems more men, typically from older and white demographics, tend to shape antiabortion legislation, while a parallel inclination toward endorsing capital punishment appears prevalent among similar groups. While both positions are draconian with life-and-death implications, they converge on a fundamental conflict with individual autonomy equally, albeit in distinct realms\u2014the debate over reproductive rights versus the discourse on criminal justice. It is essential to approach these justifications with a critical eye, bearing in mind their inherently vilifying stance on personal choice. Engaging in this discourse requires a balance of respect for differing viewpoints while not straying from critical scrutiny of policies that broadly curtail individual rights.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.39762643,
+                        0.08784214,
+                        0.06203299,
+                        0.08974565,
+                        0.29738936,
+                        0.00876638,
+                        0.35138994,
+                        0.13425097,
+                        0.1019112,
+                        0.19614919,
+                        0.01743749,
+                        0.01661893,
+                        0.01067898,
+                        0.05549257
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Evolution vs creation",
+        "topic": "Topic: Evolution vs creation:",
         "inputText": "You lost me--- 99% of what you say speaks IN FAVOR of evolution and AGAINST creationism\r\n--- At most you point out that science doesn't have all the answers (no scientist would try to counter you on that one) and that there may easily be halfway point between faith/science where evolution and creationism can co-exist (a great many liberal theologians and even agnostics would have no real problem with that idea)",
         "chart1Data": {
             "labels": [
@@ -2240,47 +2327,50 @@
                 0.02348019
             ]
         },
-        "rewrittenTexts": {
-            "text": "Transitioning into a balanced discussion on evolution and creationism, it's worth acknowledging their unique perspectives, could foster mutual respect. Views that appreciate the contributions of science, coupled with the profound philosophical depth offered by creationism, build towards a broader, more inclusive conversation. This discussion transcends mere scientific proof, touching deep-seated beliefs and values. Respecting each point of view is crucial in this complex interchange of ideas.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.06811357,
-                    0.01643996,
-                    0.01346649,
-                    0.01821276,
-                    0.05161175,
-                    0.02084452,
-                    0.05918988,
-                    0.061604,
-                    0.05580355,
-                    0.06953751,
-                    0.02407408,
-                    0.02315481,
-                    0.0226094,
-                    0.03078003
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Transitioning into a balanced discussion on evolution and creationism, it's worth acknowledging their unique perspectives, could foster mutual respect. Views that appreciate the contributions of science, coupled with the profound philosophical depth offered by creationism, build towards a broader, more inclusive conversation. This discussion transcends mere scientific proof, touching deep-seated beliefs and values. Respecting each point of view is crucial in this complex interchange of ideas.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.06811357,
+                        0.01643996,
+                        0.01346649,
+                        0.01821276,
+                        0.05161175,
+                        0.02084452,
+                        0.05918988,
+                        0.061604,
+                        0.05580355,
+                        0.06953751,
+                        0.02407408,
+                        0.02315481,
+                        0.0226094,
+                        0.03078003
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Ban plastic water bottles",
+        "topic": "Topic: Ban plastic water bottles:",
         "inputText": "Yes it is creating SIERIOUS issues to the envirnment. When people finally realize that is in turn hurting us to as humans maybe they won't want that plastic after all!",
         "chart1Data": {
             "labels": [
@@ -2316,47 +2406,50 @@
                 0.03910308
             ]
         },
-        "rewrittenTexts": {
-            "text": "It is indeed creating serious environmental concerns. When individuals become aware that such practices adversely affect us as human beings, perhaps we will collectively seek alternatives to avoid these plastics.",
-            "bertScore": "BERT Score: 0.89",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.11189231,
-                    0.01021458,
-                    0.00793976,
-                    0.00826359,
-                    0.03468152,
-                    0.02255982,
-                    0.03610036,
-                    0.21408698,
-                    0.20233102,
-                    0.13729402,
-                    0.14154184,
-                    0.04164185,
-                    0.02512738,
-                    0.04550899
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "It is indeed creating serious environmental concerns. When individuals become aware that such practices adversely affect us as human beings, perhaps we will collectively seek alternatives to avoid these plastics.",
+                "bertScore": "BERT Score: 0.89",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.11189231,
+                        0.01021458,
+                        0.00793976,
+                        0.00826359,
+                        0.03468152,
+                        0.02255982,
+                        0.03610036,
+                        0.21408698,
+                        0.20233102,
+                        0.13729402,
+                        0.14154184,
+                        0.04164185,
+                        0.02512738,
+                        0.04550899
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Pro choice vs pro life",
+        "topic": "Topic: Pro choice vs pro life:",
         "inputText": "What i dont undertsand is how people rationalize taking life it just doesnt make any sense... idc the situation in america how is killing leagal?",
         "chart1Data": {
             "labels": [
@@ -2392,47 +2485,50 @@
                 0.37642264
             ]
         },
-        "rewrittenTexts": {
-            "text": "\"How can individuals reconcile the act of taking life with the essence of justice? The legality of such actions in America, no matter the circumstances, seems irrational. Viewing it without considering the broader moral implications undermines the very fabric of an ethically complex society.\"",
-            "bertScore": "BERT Score: 0.84",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.5696484,
-                    0.02812812,
-                    0.02873268,
-                    0.03498973,
-                    0.2571683,
-                    0.01463053,
-                    0.25978988,
-                    0.47528675,
-                    0.53564054,
-                    0.2554996,
-                    0.1053827,
-                    0.01692956,
-                    0.01021744,
-                    0.03612045
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "\"How can individuals reconcile the act of taking life with the essence of justice? The legality of such actions in America, no matter the circumstances, seems irrational. Viewing it without considering the broader moral implications undermines the very fabric of an ethically complex society.\"",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.5696484,
+                        0.02812812,
+                        0.02873268,
+                        0.03498973,
+                        0.2571683,
+                        0.01463053,
+                        0.25978988,
+                        0.47528675,
+                        0.53564054,
+                        0.2554996,
+                        0.1053827,
+                        0.01692956,
+                        0.01021744,
+                        0.03612045
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Should the drinking age be lowered to 18?????",
+        "topic": "Topic: Should the drinking age be lowered to 18?????:",
         "inputText": "You know I really don't see why not? After all people in Europe are allowed to drink at the age of 16-Germany---and in Mexico the drinking age was 18 until now that it's 21. I think the reason why it's 21 is because people in the US are too freaking retarded and dont' know how to act right. Why in foreign countries the drinking age is lower and they actually have less accidents or anyother problems? Think about that!",
         "chart1Data": {
             "labels": [
@@ -2468,47 +2564,50 @@
                 0.09974933
             ]
         },
-        "rewrittenTexts": {
-            "text": "This discourse contends that varying global drinking ages, shaped by diverse cultural norms, are a subject of intense debate and reflection. A critical examination of countries like Germany and Mexico, where legal drinking ages differ from the US's 21 standard, suggests these discrepancies stem not from a lack of understanding among US citizens regarding responsible drinking behavior, but rather from culturally ingrained practices and historically unique perspectives on alcohol consumption. To simply equate the differences in drinking age laws to any level of intellectual deficacy or 'retardation' among the American population disregards the complexity of cultural identity and the practical implications such laws aim to mediate regarding public safety and behavior norms.",
-            "bertScore": "BERT Score: 0.84",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.91765237,
-                    0.6705399,
-                    0.5001571,
-                    0.47667497,
-                    0.8790957,
-                    0.02958308,
-                    0.8753537,
-                    0.5624846,
-                    0.37638423,
-                    0.57220465,
-                    0.04707917,
-                    0.01689611,
-                    0.00870579,
-                    0.05002053
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "This discourse contends that varying global drinking ages, shaped by diverse cultural norms, are a subject of intense debate and reflection. A critical examination of countries like Germany and Mexico, where legal drinking ages differ from the US's 21 standard, suggests these discrepancies stem not from a lack of understanding among US citizens regarding responsible drinking behavior, but rather from culturally ingrained practices and historically unique perspectives on alcohol consumption. To simply equate the differences in drinking age laws to any level of intellectual deficacy or 'retardation' among the American population disregards the complexity of cultural identity and the practical implications such laws aim to mediate regarding public safety and behavior norms.",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.91765237,
+                        0.6705399,
+                        0.5001571,
+                        0.47667497,
+                        0.8790957,
+                        0.02958308,
+                        0.8753537,
+                        0.5624846,
+                        0.37638423,
+                        0.57220465,
+                        0.04707917,
+                        0.01689611,
+                        0.00870579,
+                        0.05002053
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Can the police keep your car permantly if you have 3rd suspended license?",
+        "topic": "Topic: Can the police keep your car permantly if you have 3rd suspended license?:",
         "inputText": "Towed three times and impounded for 30 days each time?  Man, you're just not getting the message, are you?\r\n\r\nIf you are in California, you bet the police can forfeit your vehicle and it doesn't take three times to make it a charm.  Technically, your vehicle could be subject to forfeiture proceedings after your first suspended license beef.  Someone like you is exactly the reason the legislature designed that law, because your privilege to drive has been taken away from you and yet you obviously continue to drive.  People like you are involved in an exponentially higher than average number of traffic accidents so the legislature figured maybe people like you should have your vehicles forfeited to the state if you just didn't go along with the game plan.\r\n\r\nVoila - I give you California Vehicle Code section 14607.6...and a link to it below.  It would also be worth your time to review 14607.4, whether or not you live in California.\r\n\r\nYou really need to stop driving.  Really.",
         "chart1Data": {
             "labels": [
@@ -2544,47 +2643,50 @@
                 0.03075486
             ]
         },
-        "rewrittenTexts": {
-            "text": "Attention, fellow citizens. Let's address the topic of our discussion with the decorum befitting a fruitful dialogue, examining California's strict vehicle forfeiture laws. These laws were intentionally created, not as a punitive measure, but as a part of the state's broader commitment to public safety and justice. Take note of the intent - it is not merely a whimsical decree but a response to repeated transgressions - for instance, habitual drivers who, despite multiple encounters with the law, fail to abide by the mandated legal directives regarding traffic offenses.",
-            "bertScore": "BERT Score: 0.83",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.04260778,
-                    0.01402244,
-                    0.01408085,
-                    0.0154908,
-                    0.04898491,
-                    0.04392114,
-                    0.04237061,
-                    0.04555531,
-                    0.04577213,
-                    0.04108558,
-                    0.03023037,
-                    0.02187734,
-                    0.02379832,
-                    0.03494757
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "Attention, fellow citizens. Let's address the topic of our discussion with the decorum befitting a fruitful dialogue, examining California's strict vehicle forfeiture laws. These laws were intentionally created, not as a punitive measure, but as a part of the state's broader commitment to public safety and justice. Take note of the intent - it is not merely a whimsical decree but a response to repeated transgressions - for instance, habitual drivers who, despite multiple encounters with the law, fail to abide by the mandated legal directives regarding traffic offenses.",
+                "bertScore": "BERT Score: 0.83",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.04260778,
+                        0.01402244,
+                        0.01408085,
+                        0.0154908,
+                        0.04898491,
+                        0.04392114,
+                        0.04237061,
+                        0.04555531,
+                        0.04577213,
+                        0.04108558,
+                        0.03023037,
+                        0.02187734,
+                        0.02379832,
+                        0.03494757
+                    ]
+                }
             }
-        }
+        ]
     },
     {
-        "topic": "Topic: Why did california ban 50 bmg rifles when these rifles have never been used in violent crime in ca?",
+        "topic": "Topic: Why did california ban 50 bmg rifles when these rifles have never been used in violent crime in ca?:",
         "inputText": "That is the most ridiculous gun law passed to date. Your part right on it never being used in a violent crime. I'm not sure where it happened but so far only one person in the united states has been killed by a 50 caliber weapon and i believe it was a 50AE Desert Eagle. The cost of the $3000+ rifles and the expensive ammo that isn't stocked in every gun store makes it very unpractical for any criminal. When california passed the law Barrett actually ended the warrenties on the LAPD M99's, and then came out with the CA legal .416 rifle. Then all the black powder shooters started to complain so CA made an exception for .50cal blackpowder rifles!(which are easier to get by criminals)",
         "chart1Data": {
             "labels": [
@@ -2620,43 +2722,46 @@
                 0.08393078
             ]
         },
-        "rewrittenTexts": {
-            "text": "The enactment of this gun legislation appears to be one of the most critically debated legal measures to date, given its stipulations regarding firearms like the caliber 50 (50 Caliber). It is accurate to note that comprehensive records of fatal incidents involving this specific firearm\u2014such as the 50 AE Desert Eagle\u2014are exceedingly scarce; to my knowledge, only slightly above one instance is documented within the United States context. Considering the financial outlay required to procure these high-caliber weapons exceeds $3,000, along with the market scarcity of accompanying ammunition, such firearms are rendered impractical from a criminal utility standpoint. Moreover, the stringent laws imposed by California precipitated a shifting landscape that culminated in the California Department of Justice acquiring the .416 chambered rifle, subsequently diverting amplification efforts to .50 Caliber special-purpose arms, which argue designing propositions that's conceivably more accessible to ill-intended actors. Providing additional clarity while maintaining the tenor of esteemed debate, it is prudent to reflect upon these constitutionally inspired measures within the broader scope of our collective security imperative while upholding the sanctity of individual rights and property.",
-            "bertScore": "BERT Score: 0.85",
-            "chart2Data": {
-                "labels": [
-                    "Inappropriateness",
-                    "Toxic Emotions",
-                    "Excessive Intensity",
-                    "Emotional Deception",
-                    "Missing Commitment",
-                    "Missing Seriousness",
-                    "Missing Openness",
-                    "Missing Intelligibility",
-                    "Unclear Meaning",
-                    "Missing Relevance",
-                    "Confusing Reasoning",
-                    "Other Reasons",
-                    "Detrimental Orthography",
-                    "Reason Unclassified"
-                ],
-                "values": [
-                    0.14075686,
-                    0.0156772,
-                    0.01088424,
-                    0.01644899,
-                    0.05809748,
-                    0.01697988,
-                    0.06819455,
-                    0.20118472,
-                    0.18871124,
-                    0.19669889,
-                    0.0354707,
-                    0.03101347,
-                    0.02133661,
-                    0.05322973
-                ]
+        "rewrittenTexts": [
+            {
+                "headerValue": "",
+                "text": "The enactment of this gun legislation appears to be one of the most critically debated legal measures to date, given its stipulations regarding firearms like the caliber 50 (50 Caliber). It is accurate to note that comprehensive records of fatal incidents involving this specific firearm\u2014such as the 50 AE Desert Eagle\u2014are exceedingly scarce; to my knowledge, only slightly above one instance is documented within the United States context. Considering the financial outlay required to procure these high-caliber weapons exceeds $3,000, along with the market scarcity of accompanying ammunition, such firearms are rendered impractical from a criminal utility standpoint. Moreover, the stringent laws imposed by California precipitated a shifting landscape that culminated in the California Department of Justice acquiring the .416 chambered rifle, subsequently diverting amplification efforts to .50 Caliber special-purpose arms, which argue designing propositions that's conceivably more accessible to ill-intended actors. Providing additional clarity while maintaining the tenor of esteemed debate, it is prudent to reflect upon these constitutionally inspired measures within the broader scope of our collective security imperative while upholding the sanctity of individual rights and property.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.14075686,
+                        0.0156772,
+                        0.01088424,
+                        0.01644899,
+                        0.05809748,
+                        0.01697988,
+                        0.06819455,
+                        0.20118472,
+                        0.18871124,
+                        0.19669889,
+                        0.0354707,
+                        0.03101347,
+                        0.02133661,
+                        0.05322973
+                    ]
+                }
             }
-        }
+        ]
     }
 ]

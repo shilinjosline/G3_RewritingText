@@ -1,1 +1,747 @@
-
+[
+    {
+        "topic": "Topic: Christianity or atheism:",
+        "inputText": "You rather die believing in god,than not believing and finding out he exists!",
+        "chart1Data": {
+            "labels": [
+                "Inappropriateness",
+                "Toxic Emotions",
+                "Excessive Intensity",
+                "Emotional Deception",
+                "Missing Commitment",
+                "Missing Seriousness",
+                "Missing Openness",
+                "Missing Intelligibility",
+                "Unclear Meaning",
+                "Missing Relevance",
+                "Confusing Reasoning",
+                "Other Reasons",
+                "Detrimental Orthography",
+                "Reason Unclassified"
+            ],
+            "values": [
+                0.4593992829322815,
+                0.0464500188827514,
+                0.0676696598529815,
+                0.0246699787676334,
+                0.1693598330020904,
+                0.194190040230751,
+                0.2088176161050796,
+                0.709332287311554,
+                0.5217145681381226,
+                0.535222053527832,
+                0.4921406209468841,
+                0.3711107075214386,
+                0.0236215963959693,
+                0.859768807888031
+            ]
+        },
+        "rewrittenTexts": [
+            {
+                "headerValue": "Missing Intelligibility",
+                "text": "You would rather die believing in God, than not believing and finding out he exists! Why?",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.7796798348426819,
+                        0.0338061526417732,
+                        0.0461662150919437,
+                        0.0220823418349027,
+                        0.2288208752870559,
+                        0.2158623933792114,
+                        0.2661791741847992,
+                        0.9346109628677368,
+                        0.8955705761909485,
+                        0.7551340460777283,
+                        0.9089217782020568,
+                        0.4161171913146972,
+                        0.0447154007852077,
+                        0.7932991981506348
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Relevance",
+                "text": "You would rather die believing in God, than not believing and finding out he exists!",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.3825093805789947,
+                        0.0246689356863498,
+                        0.0313133187592029,
+                        0.0149113219231367,
+                        0.117707647383213,
+                        0.1218667328357696,
+                        0.1433567255735397,
+                        0.6150134205818176,
+                        0.4831980466842651,
+                        0.4509383738040924,
+                        0.3707621097564697,
+                        0.1476338058710098,
+                        0.0149350995197892,
+                        0.5221725702285767
+                    ]
+                }
+            },
+            {
+                "headerValue": "Inappropriateness",
+                "text": "You would rather die believing in God, than not believing and finding out he exists!",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.3825093805789947,
+                        0.0246689356863498,
+                        0.0313133187592029,
+                        0.0149113219231367,
+                        0.117707647383213,
+                        0.1218667328357696,
+                        0.1433567255735397,
+                        0.6150134205818176,
+                        0.4831980466842651,
+                        0.4509383738040924,
+                        0.3707621097564697,
+                        0.1476338058710098,
+                        0.0149350995197892,
+                        0.5221725702285767
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "topic": "Topic: Firefox vs internet explorer:",
+        "inputText": "Firefox has the user made extensions which cater for the user based community therefore it wins",
+        "chart1Data": {
+            "labels": [
+                "Inappropriateness",
+                "Toxic Emotions",
+                "Excessive Intensity",
+                "Emotional Deception",
+                "Missing Commitment",
+                "Missing Seriousness",
+                "Missing Openness",
+                "Missing Intelligibility",
+                "Unclear Meaning",
+                "Missing Relevance",
+                "Confusing Reasoning",
+                "Other Reasons",
+                "Detrimental Orthography",
+                "Reason Unclassified"
+            ],
+            "values": [
+                0.8994246125221252,
+                0.1978705376386642,
+                0.1198609545826911,
+                0.1266654878854751,
+                0.8382452130317688,
+                0.8602151274681091,
+                0.8340765237808228,
+                0.8151578307151794,
+                0.7299515604972839,
+                0.5281537771224976,
+                0.2024830728769302,
+                0.0408538877964019,
+                0.028713934123516,
+                0.0418788120150566
+            ]
+        },
+        "rewrittenTexts": [
+            {
+                "headerValue": "Inappropriateness",
+                "text": "Firefox has the user- made extensions, which cater to the user based community therefore wins.",
+                "bertScore": "BERT Score: 0.97",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8164618015289307,
+                        0.1230727657675743,
+                        0.0528769120573997,
+                        0.0926990434527397,
+                        0.7092803120613098,
+                        0.5529484748840332,
+                        0.6966354250907898,
+                        0.6615691781044006,
+                        0.5048437118530273,
+                        0.3419501185417175,
+                        0.0985949486494064,
+                        0.0326854921877384,
+                        0.0286734588444232,
+                        0.0337455719709396
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "topic": "Topic: Should physical education be mandatory in schools:",
+        "inputText": "I HATE P.E. I have to run so much and I hate it soooo much!!!!!",
+        "chart1Data": {
+            "labels": [
+                "Inappropriateness",
+                "Toxic Emotions",
+                "Excessive Intensity",
+                "Emotional Deception",
+                "Missing Commitment",
+                "Missing Seriousness",
+                "Missing Openness",
+                "Missing Intelligibility",
+                "Unclear Meaning",
+                "Missing Relevance",
+                "Confusing Reasoning",
+                "Other Reasons",
+                "Detrimental Orthography",
+                "Reason Unclassified"
+            ],
+            "values": [
+                0.9322097897529602,
+                0.964356005191803,
+                0.9417960047721864,
+                0.8973209261894226,
+                0.9400564432144164,
+                0.685163676738739,
+                0.8842505216598511,
+                0.5230435729026794,
+                0.3914732336997986,
+                0.5186944007873535,
+                0.1498787105083465,
+                0.1216280683875083,
+                0.1263970285654068,
+                0.0867777466773986
+            ]
+        },
+        "rewrittenTexts": [
+            {
+                "headerValue": "Inappropriateness",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Toxic Emotions",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Relevance",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Intelligibility",
+                "text": "I hate P.E.. I have to run so much and I hate it so much.",
+                "bertScore": "BERT Score: 0.97",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9493427276611328,
+                        0.9142670631408693,
+                        0.8947473168373108,
+                        0.7722974419593811,
+                        0.922723114490509,
+                        0.5973594784736633,
+                        0.8894446492195129,
+                        0.5901911854743958,
+                        0.3052773773670196,
+                        0.4547751545906067,
+                        0.113521970808506,
+                        0.0713343322277069,
+                        0.0623998157680034,
+                        0.0556631684303283
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Openness",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Commitment",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Emotional Deception",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            },
+            {
+                "headerValue": "Excessive Intensity",
+                "text": "I hate P.E.. I have to run so much and I hate it sooo much.",
+                "bertScore": "BERT Score: 0.98",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9486883878707886,
+                        0.9268586039543152,
+                        0.9097210764884948,
+                        0.7977982759475708,
+                        0.9240962862968444,
+                        0.6514307856559753,
+                        0.8896629810333252,
+                        0.5878519415855408,
+                        0.2968596518039703,
+                        0.4430391490459442,
+                        0.1060817614197731,
+                        0.0791285932064056,
+                        0.07269998639822,
+                        0.0532098822295665
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "topic": "Topic: Tv is better than books:",
+        "inputText": "TV is important for communication. This is to cross the charector limit.",
+        "chart1Data": {
+            "labels": [
+                "Inappropriateness",
+                "Toxic Emotions",
+                "Excessive Intensity",
+                "Emotional Deception",
+                "Missing Commitment",
+                "Missing Seriousness",
+                "Missing Openness",
+                "Missing Intelligibility",
+                "Unclear Meaning",
+                "Missing Relevance",
+                "Confusing Reasoning",
+                "Other Reasons",
+                "Detrimental Orthography",
+                "Reason Unclassified"
+            ],
+            "values": [
+                0.8757739067077637,
+                0.0253919716924428,
+                0.0260359179228544,
+                0.0268039256334304,
+                0.1639695316553115,
+                0.1055491045117378,
+                0.1811339408159256,
+                0.9551722407341005,
+                0.8533694744110107,
+                0.7655863165855408,
+                0.9579843282699584,
+                0.5933493375778198,
+                0.2029068768024444,
+                0.5317453145980835
+            ]
+        },
+        "rewrittenTexts": [
+            {
+                "headerValue": "Inappropriateness",
+                "text": "TV is important for communication. This is to cross the charector limit.",
+                "bertScore": "BERT Score: 1.00",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8757739067077637,
+                        0.0253919716924428,
+                        0.0260359179228544,
+                        0.0268039256334304,
+                        0.1639695316553115,
+                        0.1055491045117378,
+                        0.1811339408159256,
+                        0.9551722407341005,
+                        0.8533694744110107,
+                        0.7655863165855408,
+                        0.9579843282699584,
+                        0.5933493375778198,
+                        0.2029068768024444,
+                        0.5317453145980835
+                    ]
+                }
+            },
+            {
+                "headerValue": "Missing Intelligibility",
+                "text": "TV is important for communication. This is to cross the charector limit.",
+                "bertScore": "BERT Score: 1.00",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8757739067077637,
+                        0.0253919716924428,
+                        0.0260359179228544,
+                        0.0268039256334304,
+                        0.1639695316553115,
+                        0.1055491045117378,
+                        0.1811339408159256,
+                        0.9551722407341005,
+                        0.8533694744110107,
+                        0.7655863165855408,
+                        0.9579843282699584,
+                        0.5933493375778198,
+                        0.2029068768024444,
+                        0.5317453145980835
+                    ]
+                }
+            },
+            {
+                "headerValue": "Confusing Reasoning",
+                "text": "TV is important for communication. This is to cross the charector limit.",
+                "bertScore": "BERT Score: 1.00",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.8757739067077637,
+                        0.0253919716924428,
+                        0.0260359179228544,
+                        0.0268039256334304,
+                        0.1639695316553115,
+                        0.1055491045117378,
+                        0.1811339408159256,
+                        0.9551722407341005,
+                        0.8533694744110107,
+                        0.7655863165855408,
+                        0.9579843282699584,
+                        0.5933493375778198,
+                        0.2029068768024444,
+                        0.5317453145980835
+                    ]
+                }
+            }
+        ]
+    }
+]

@@ -33,6 +33,7 @@
             border-radius: 5px;
             white-space: pre-wrap;
             line-height: 1.6;
+            background-color: #fff;
         }
         .charts {
             display: flex;
@@ -59,8 +60,46 @@
             border-radius: 3px;
             font-weight: bold;
         }
+        .arrows {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .arrow {
+            font-size: 24px;
+            margin: 0 15px;
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .arrows .arrow:hover {
+            background-color: #333;
+        }
+        .text-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .text-box {
+            width: 45%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fefefe;
+            min-height: 100px;
+        }
+        .text-box h3 {
+            margin-bottom: 10px;
+        }
         .highlight {
             background-color: #d4f8d4; /* Light green for similar words */
+            font-weight: bold;
+        }
+        .difference {
+            background-color: #f8d4d4; /* Light red for differences */
             font-weight: bold;
         }
     </style>
@@ -79,7 +118,7 @@
         <div class="text-section">
             <h3>Rewritten Text</h3>
             <div class="rewritten-text" id="rewrittenText">
-                Modified text with highlights will appear here.
+                Rewritten text will appear here.
             </div>
         </div>
     </div>
@@ -95,13 +134,28 @@
         </div>
     </div>
 
-    <div class="bert-score" id="bertScore">
-        BERT Score: 88%
+    <div class="text-boxes">
+        <div class="text-box" id="similarWordsBox">
+            <h3>Similar Words</h3>
+            <div id="similarWords">
+                Similar words will appear here.
+            </div>
+        </div>
+        <div class="text-box" id="differencesBox">
+            <h3>Differences</h3>
+            <div id="differences">
+                Differences will appear here.
+            </div>
+        </div>
     </div>
 
     <div class="arrows">
         <span class="arrow" onclick="navigate(-1)">&#8592;</span>
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
+    </div>
+
+    <div class="bert-score" id="bertScore">
+        BERT Score: 88%
     </div>
 
     <script>
@@ -200,26 +254,26 @@
             const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            highlightSimilarWords(data.inputText, data.rewrittenTexts.text);
+            document.getElementById('rewrittenText').innerText = data.rewrittenTexts.text;
 
-            // Update chart1 with the current dataset's chart data
+            updateTextBoxes(data.inputText, data.rewrittenTexts.text);
+
             chart1.data.labels = data.chart1Data.labels;
             chart1.data.datasets = [{
                 label: 'Values',
                 data: data.chart1Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)', // Grey border color
-                backgroundColor: 'rgba(169, 169, 169, 0.2)', // Grey background color
+                borderColor: 'rgba(169, 169, 169, 1)',
+                backgroundColor: 'rgba(169, 169, 169, 0.2)',
                 borderWidth: 1
             }];
             chart1.update();
 
-            // Update chart2 with the rewritten text's chart data
             chart2.data.labels = data.rewrittenTexts.chart2Data.labels;
             chart2.data.datasets = [{
                 label: 'Values',
                 data: data.rewrittenTexts.chart2Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)', // Grey border color
-                backgroundColor: 'rgba(169, 169, 169, 0.2)', // Grey background color
+                borderColor: 'rgba(169, 169, 169, 1)',
+                backgroundColor: 'rgba(169, 169, 169, 0.2)',
                 borderWidth: 1
             }];
             chart2.update();
@@ -227,20 +281,15 @@
             document.getElementById('bertScore').innerText = data.rewrittenTexts.bertScore;
         }
 
-        function highlightSimilarWords(inputText, rewrittenText) {
+        function updateTextBoxes(inputText, rewrittenText) {
             const inputWords = inputText.split(/\s+/);
             const rewrittenWords = rewrittenText.split(/\s+/);
-            const rewrittenContainer = document.getElementById('rewrittenText');
-            rewrittenContainer.innerHTML = '';
 
-            rewrittenWords.forEach(word => {
-                const span = document.createElement('span');
-                span.textContent = word + ' ';
-                if (inputWords.includes(word)) {
-                    span.classList.add('highlight'); // Highlight similar words
-                }
-                rewrittenContainer.appendChild(span);
-            });
+            const similarWords = inputWords.filter(word => rewrittenWords.includes(word));
+            const differences = rewrittenWords.filter(word => !inputWords.includes(word));
+
+            document.getElementById('similarWords').innerText = similarWords.join(' ');
+            document.getElementById('differences').innerText = differences.join(' ');
         }
     </script>
 </body>

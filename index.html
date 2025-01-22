@@ -150,47 +150,7 @@
     </div>
 
     <script>
-        const datasets = [
-            {
-                topic: "Topic: William Farquhar and Singapore",
-                inputText: "People can't be forced to wear school uniforms, I mean each person has their own wish whether they want to or don't want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
-                rewrittenTexts: [
-                    { 
-                        headerValue: "Toxic Emotions", 
-                        text: "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.", 
-                        bertScore: "BERT Score: 88%",
-                        chart2Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }
-                    },
-                    { 
-                        headerValue: "Constructive Feedback", 
-                        text: "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression.", 
-                        bertScore: "BERT Score: 85%",
-                        chart2Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }
-                    }
-                ],
-                chart1Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }
-            },
-            {
-                topic: "Topic: Pricing Policies",
-                inputText: "I've always been bothered by pricing based on age. Take movies, for example. A seat is a seat! Why should people between the ages of 12 and 64 pay more for the same seat? And what is a 'senior discount' about?",
-                rewrittenTexts: [
-                    { 
-                        headerValue: "Toxic Emotions", 
-                        text: "Pricing policies based on age seem inherently unfair. Why should age dictate the cost of a movie ticket for the same experience?", 
-                        bertScore: "BERT Score: 82%",
-                        chart2Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }                    
-                    },
-                    { 
-                        headerValue: "Fair Pricing", 
-                        text: "Age-based pricing for seats, such as movie tickets, raises questions about fairness and equality in customer experiences.", 
-                        bertScore: "BERT Score: 85%",
-                        char2Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }
-                    }
-                ],
-                chart1Data: { labels: ["Inappropriateness","Toxic Emotions", "Excessive Intensity", "Emotional Deception","Missing Commitment", "Missing Seriousness", "Missing Openness","Missing Intelligibility", "Unclear Meaning", "Missing Relevance ","Confusing Reasoning", "Other Reasons", "Detrimental Orthography","Reason Unclassified"], values: [0.4, 0.3, 0.2,0.1, 1.0, 0.1,0.2, 0.3, 0.4,0.5, 0.6, 0.7,0.8, 0.9] }
-            }
-        ];
-
+        let datasets = []; // This will hold the data from the external file
         let currentIndex = 0;
         let rewrittenIndex = 0;
 
@@ -199,66 +159,12 @@
         
         const chart1 = new Chart(ctx1, {
             type: 'bar',
-            data: {
-                labels: datasets[0].chart1Data.labels,
-                datasets: [{
-                    label: 'Values', // The legend comes from this "label"
-                    data: datasets[0].chart1Data.values,
-                    backgroundColor: 'rgba(128, 128, 128, 0.2)',
-                    borderColor: 'rgba(128, 128, 128, 1)',
-                    borderWidth: 1
-                }]
-            },
+            data: {},
             options: {
-                indexAxis: 'y', // Optional: Flip the axes to make the chart horizontal
+                indexAxis: 'y', 
                 plugins: {
                     legend: {
-                        display: false // Disable the legend
-                    }
-                },
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        min: 0.0,
-                        max: 1.0,
-                        ticks: {
-                            stepSize: 0.1,
-                            callback: function(value) {
-                                return value.toFixed(1);
-                            }
-                        },
-                        title: {
-                            display: true,
-                            text: 'Probability',
-                            font: {
-                                size: 14
-                            }
-                        }
-                    },
-                    y: {
-                        grid: { display: false }
-                    }
-                }
-            }
-        });
-        
-        const chart2 = new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: datasets[0].rewrittenTexts[0].chart2Data.labels,
-                datasets: [{
-                    label: 'Values', // The legend comes from this "label"
-                    data: datasets[0].rewrittenTexts[0].chart2Data.values,
-                    backgroundColor: 'rgba(128, 128, 128, 0.2)',
-                    borderColor: 'rgba(128, 128, 128, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                indexAxis: 'y', // Optional: Flip the axes to make the chart horizontal
-                plugins: {
-                    legend: {
-                        display: false // Disable the legend
+                        display: false
                     }
                 },
                 scales: {
@@ -287,13 +193,57 @@
             }
         });
 
-        
+        const chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {},
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        min: 0.0,
+                        max: 1.0,
+                        ticks: {
+                            stepSize: 0.1,
+                            callback: function(value) {
+                                return value.toFixed(1);
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Probability',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Fetch the data from the external JSON file
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                datasets = data; // Store the data in the datasets array
+                navigate(0); // Start by navigating to the first dataset
+            })
+            .catch(error => console.error('Error loading data:', error));
+
         function navigate(direction) {
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = datasets.length - 1;
             if (currentIndex >= datasets.length) currentIndex = 0;
 
-            rewrittenIndex = 0; // Reset rewritten index when switching datasets
+            rewrittenIndex = 0;
             const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
@@ -334,7 +284,6 @@
             });
         }
 
-        navigate(0);
     </script>
 </body>
 </html>

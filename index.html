@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page with Similar Words Highlight</title>
+    <title>Row-Based Page with Similar Words Highlight</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-    <h1 id="topic">Topic: William and Singapore</h1>
+    <h1 id="topic">Dynamic Row-Based Navigation</h1>
 
     <div class="content">
         <div class="text-section">
@@ -97,6 +97,11 @@
 
     <div class="bert-score" id="bertScore">
         BERT Score: 88%
+    </div>
+
+    <div class="arrows">
+        <span class="arrow" onclick="navigate(-1)">&#8592;</span>
+        <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
     <script>
@@ -183,16 +188,19 @@
             .then(response => response.json())
             .then(data => {
                 datasets = data; // Store the data in the datasets array
-                displayData(); // Display the first dataset
+                navigate(0); // Start by navigating to the first row
             })
             .catch(error => console.error('Error loading data:', error));
 
-        function displayData() {
-            const data = datasets[currentIndex];
+        function navigate(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = datasets.length - 1; // Loop back to last row
+            if (currentIndex >= datasets.length) currentIndex = 0;   // Loop back to first row
 
+            const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            highlightSimilarWords(data.inputText, data.rewrittenTexts[0].text);
+            highlightSimilarWords(data.inputText, data.rewrittenText);
 
             // Update chart1 with the current dataset's chart data
             chart1.data.labels = data.chart1Data.labels;
@@ -206,18 +214,17 @@
             chart1.update();
 
             // Update chart2 with the rewritten text's chart data
-            const rewritten = data.rewrittenTexts[0];
-            chart2.data.labels = rewritten.chart2Data.labels;
+            chart2.data.labels = data.chart2Data.labels;
             chart2.data.datasets = [{
                 label: 'Values',
-                data: rewritten.chart2Data.values,
+                data: data.chart2Data.values,
                 borderColor: 'rgba(169, 169, 169, 1)', // Grey border color
                 backgroundColor: 'rgba(169, 169, 169, 0.2)', // Grey background color
                 borderWidth: 1
             }];
             chart2.update();
 
-            document.getElementById('bertScore').innerText = rewritten.bertScore;
+            document.getElementById('bertScore').innerText = `BERT Score: ${data.bertScore}`;
         }
 
         function highlightSimilarWords(inputText, rewrittenText) {

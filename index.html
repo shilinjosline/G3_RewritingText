@@ -6,7 +6,7 @@
     <title>Dynamic Page Navigation with Inline Differences</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/diff/dist/diff.min.js"></script>
-    <style>
+        <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -43,16 +43,17 @@
             position: relative;
         }
         .arrow {
-            font-size: 2em;
+            font-size: 1.2em;  /* Smaller size for arrows */
             cursor: pointer;
             user-select: none;
             padding: 5px 10px;
             border-radius: 3px;
-            background-color: black;
-            color: white;
+            background-color: #d3d3d3;  /* Grey background */
+            color: #555;  /* Grey color */
         }
         .arrow:hover {
-            background-color: #444;
+            background-color: #a9a9a9;  /* Darker grey on hover */
+            color: #fff;  /* White color on hover */
         }
         .charts {
             display: flex;
@@ -90,8 +91,8 @@
             margin-top: 20px;
         }
         .arrows .arrow {
-            font-size: 2.5em;  /* Larger size for bottom arrows */
-            padding: 10px 20px;
+            font-size: 1.2em;  /* Smaller arrows at the bottom */
+            padding: 5px 10px;
         }
         .added {
             background-color: #d4f8d4;

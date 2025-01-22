@@ -116,15 +116,12 @@
 
     <div class="arrows">
         <span class="arrow" onclick="navigate(-1)">&#8592; Previous Topic</span>
-        <span class="arrow" onclick="navigateRewritten(-1)">&#8592; Previous Rewrite</span>
-        <span class="arrow" onclick="navigateRewritten(1)">Next Rewrite &#8594;</span>
         <span class="arrow" onclick="navigate(1)">Next Topic &#8594;</span>
     </div>
 
     <script>
         let datasets = [];
         let currentIndex = 0;
-        let rewrittenIndex = 0;
 
         const chart1 = new Chart(document.getElementById('chart1').getContext('2d'), {
             type: 'bar',
@@ -150,17 +147,15 @@
         function navigate(direction) {
             if (datasets.length === 0) return;
             currentIndex = (currentIndex + direction + datasets.length) % datasets.length;
-            rewrittenIndex = 0;
             const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic || 'Untitled';
             document.getElementById('inputText').innerText = data.inputText || 'No text provided';
-            updateRewrittenText();
+            updateRewrittenText(data);
         }
 
-        function updateRewrittenText() {
-            const data = datasets[currentIndex];
-            const rewrittenOptions = data.rewrittenTexts || [];
-            if (rewrittenOptions.length === 0) {
+        function updateRewrittenText(data) {
+            const rewritten = data.rewrittenTexts[0]; // Get the single rewritten text
+            if (!rewritten) {
                 document.getElementById('rewrittenText').innerText = 'No rewritten text available';
                 document.getElementById('bertScore').innerText = 'BERT Score: N/A';
                 chart2.data = { labels: [], datasets: [] };
@@ -168,7 +163,6 @@
                 return;
             }
 
-            const rewritten = rewrittenOptions[rewrittenIndex];
             document.getElementById('bertScore').innerText = rewritten.bertScore || 'BERT Score: N/A';
             updateTextWithDifferences('rewrittenText', data.inputText || '', rewritten.text || '');
 
@@ -202,13 +196,6 @@
                 const className = part.added ? 'added' : part.removed ? 'removed' : '';
                 return `<span class="${className}">${part.value}</span>`;
             }).join('');
-        }
-
-        function navigateRewritten(direction) {
-            const data = datasets[currentIndex];
-            if (!data.rewrittenTexts || data.rewrittenTexts.length === 0) return;
-            rewrittenIndex = (rewrittenIndex + direction + data.rewrittenTexts.length) % data.rewrittenTexts.length;
-            updateRewrittenText();
         }
     </script>
 </body>

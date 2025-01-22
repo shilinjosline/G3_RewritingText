@@ -170,22 +170,39 @@
         });
 
         fetch('data.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                return response.json();
+            })
             .then(data => {
                 datasets = data;
-                navigate(0);
+                if (datasets.length > 0) {
+                    navigate(0);
+                } else {
+                    console.error('Datasets are empty');
+                }
             })
-            .catch(error => console.error('Error loading data:', error));
+            .catch(error => {
+                console.error('Error loading data:', error);
+                alert('Failed to load data. Please try again later.');
+            });
 
         function navigate(direction) {
+            if (!datasets || datasets.length === 0) {
+                console.error('No datasets available');
+                return;
+            }
+
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = datasets.length - 1;
             if (currentIndex >= datasets.length) currentIndex = 0;
 
             const data = datasets[currentIndex];
 
-            document.getElementById('topic').innerText = data.topic;
-            document.getElementById('inputText').innerText = data.inputText;
+            document.getElementById('topic').innerText = data.topic || 'No topic available';
+            document.getElementById('inputText').innerText = data.inputText || 'No input text available';
 
             if (data.rewrittenTexts && data.rewrittenTexts.text) {
                 updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenTexts.text);
@@ -193,7 +210,7 @@
                 document.getElementById('rewrittenText').innerText = 'Rewritten text not available';
             }
 
-            if (data.chart1Data) {
+            if (data.chart1Data && data.chart1Data.labels && data.chart1Data.values) {
                 chart1.data = {
                     labels: data.chart1Data.labels,
                     datasets: [{
@@ -205,6 +222,8 @@
                     }]
                 };
                 chart1.update();
+            } else {
+                console.warn('chart1Data is missing or invalid');
             }
 
             if (data.rewrittenTexts && data.rewrittenTexts.chart2Data) {
@@ -219,9 +238,11 @@
                     }]
                 };
                 chart2.update();
+            } else {
+                console.warn('chart2Data is missing or invalid');
             }
 
-            document.getElementById('bertScore').innerText = data.rewrittenTexts ? data.rewrittenTexts.bertScore : 'BERT Score: N/A';
+            document.getElementById('bertScore').innerText = data.rewrittenTexts ? data.rewrittenTexts.bertScore || 'BERT Score: N/A' : 'BERT Score: N/A';
         }
 
         function updateTextWithDifferences(elementId, text1, text2) {

@@ -75,6 +75,45 @@
                         0.5771946
                     ]
                 }
+            },
+            {
+                "headerValue": "",
+                "text": "To veil a tale of ecological harmony, one need not invoke the flawlessness of soft days; rather, it is within the stark revelation facilitated by sunlight that the dissonance between plastic bottles and the equilibrium of nature is laid bare.",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.89525527,
+                        0.089515,
+                        0.05101903,
+                        0.04769573,
+                        0.3600177,
+                        0.05163144,
+                        0.3847735,
+                        0.9311325,
+                        0.82883275,
+                        0.7944456,
+                        0.5593408,
+                        0.14934972,
+                        0.02852269,
+                        0.35605448
+                    ]
+                }
             }
         ]
     },
@@ -152,6 +191,45 @@
                         0.03375757,
                         0.02063454,
                         0.06139951
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "As a healthcare professional, my foray into the depths of biology has only served to magnify my profound admiration for the intricacies of the human body. Each microscopic cell, a universe of its own compartmentalized and meticulously organized, arouses wonder akin to marveling at the most sophisticated of computers. Yet, when you gaze upon a computer's complexity, you seldom entertain the notion that creation's spark ignited this marvel\u2014the proof is in common observation rather than hypothesis. Contrastingly, those who argue evolution as the hand guiding life often find themselves marshaling faith, not unlike my observations as a caregiver who heals.",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.9244343,
+                        0.13066918,
+                        0.08521076,
+                        0.09584527,
+                        0.47484446,
+                        0.00926547,
+                        0.57706517,
+                        0.9361966,
+                        0.83600754,
+                        0.86192614,
+                        0.34707472,
+                        0.05443238,
+                        0.01599627,
+                        0.14109199
                     ]
                 }
             }
@@ -272,6 +350,84 @@
                         0.29585567
                     ]
                 }
+            },
+            {
+                "headerValue": "",
+                "text": "In the context of emerging economies, India stands out as a promising nation in development and leadership.",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.13500251,
+                        0.0146831,
+                        0.01029513,
+                        0.01457158,
+                        0.04245242,
+                        0.04597122,
+                        0.04073828,
+                        0.3601874,
+                        0.28271964,
+                        0.23178278,
+                        0.16163592,
+                        0.0535215,
+                        0.01724197,
+                        0.09561136
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "How can people question India's potential to be the leader of the world given its greatness on Earth? India has the capability to lead the world uniquely. Believe in yourself and your hard work, for surely India will WILL become the pinnacle of global leadership without comparing it to any country! Jai Hind!",
+                "bertScore": "BERT Score: 0.86",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.83883303,
+                        0.16356742,
+                        0.12792595,
+                        0.08687952,
+                        0.6536508,
+                        0.15258797,
+                        0.6975446,
+                        0.59268814,
+                        0.5041623,
+                        0.25160694,
+                        0.18464246,
+                        0.01297493,
+                        0.00597754,
+                        0.02908622
+                    ]
+                }
             }
         ]
     },
@@ -349,6 +505,45 @@
                         0.02189598,
                         0.01504452,
                         0.03144811
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "Adult entertainment, when consumed with consent, does not appear to pose a significant threat to individuals who actively seek it out. Its role in society should be acknowledged with an emphasis on consent and choice.",
+                "bertScore": "BERT Score: 0.85",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.06652863,
+                        0.01759688,
+                        0.01569616,
+                        0.01669078,
+                        0.05232564,
+                        0.02871222,
+                        0.05107354,
+                        0.06764379,
+                        0.06242298,
+                        0.05973225,
+                        0.0371965,
+                        0.02321529,
+                        0.01949245,
+                        0.02057099
                     ]
                 }
             }
@@ -430,6 +625,45 @@
                         0.04515011
                     ]
                 }
+            },
+            {
+                "headerValue": "",
+                "text": "Reimagining the argument with a focus on individualism and professionalism while respecting school guidelines and promoting student choice entails advocating for personal expression in clothing choices within the limits of the educational institution's dress code.",
+                "bertScore": "BERT Score: 0.88",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.08649252,
+                        0.0111652,
+                        0.01075671,
+                        0.01024062,
+                        0.0426108,
+                        0.03209197,
+                        0.03158676,
+                        0.10921386,
+                        0.11852816,
+                        0.07582121,
+                        0.08945327,
+                        0.03317948,
+                        0.02039572,
+                        0.02934265
+                    ]
+                }
             }
         ]
     },
@@ -507,6 +741,45 @@
                         0.01393431,
                         0.00595342,
                         0.04260841
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "The government DOES have that right, and regulation must respect individual autonomy while ensuring public safety. For instance, age of consent laws protect those deemed incapable of making informed decisions. Drug-free workplace policies safeguard workforce health. Anti-rape laws protect bodily integrity. Intellectual property laws prevent the unauthorized use of bodily material. Public decency statutes balance freedom with community standards. Properly calibrated regulations aim for the ethical use of autonomy while maintaining respect for all individuals\u2019 rights and societal norms.",
+                "bertScore": "BERT Score: 0.82",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.0773302,
+                        0.01374975,
+                        0.00993378,
+                        0.01486218,
+                        0.03349563,
+                        0.02263323,
+                        0.03497332,
+                        0.10019245,
+                        0.06174251,
+                        0.08834887,
+                        0.07061138,
+                        0.03449067,
+                        0.01948709,
+                        0.0463145
                     ]
                 }
             }
@@ -627,6 +900,84 @@
                         0.04043083
                     ]
                 }
+            },
+            {
+                "headerValue": "",
+                "text": "Books, akin to their televisual counterpoints, each serve distinct functions; while TV possesses undeniable entertainment merit, books offer an incomparably rich tapestry of cognitive rewards. They transport us to myriad settings, like slipping into a Winter North realm, and enrich us not just visually but intellectually, fostering retention and deepened understanding.",
+                "bertScore": "BERT Score: 0.84",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.04512076,
+                        0.02235579,
+                        0.02266048,
+                        0.02123976,
+                        0.04920346,
+                        0.03533516,
+                        0.05079128,
+                        0.02610934,
+                        0.02779611,
+                        0.03269156,
+                        0.02312114,
+                        0.02779034,
+                        0.02499387,
+                        0.04401898
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "Books illuminate the depths of consciousness, cultivating virtues rather than corrupting innocence. They ignite the flame of inquiry, transporting one through enchanted realms, from utopias to the mundane, embracing universal truths. Television, while a companionable spectacle, wields influence, akin to another potent stimulant. Masterworks like Fahrenheit 451 unravel the consequences of ignorance, while the Night Circus weaves a tale of ethereal allure, The Secret Garden breathes magic into the pastoral, and Inkheart conjures a world limited only by the imagination. These narratives stand as monuments to the transformative power of words, fostering reflection and wonder, equal in measure to the vivid landscapes television paints, albeit within distinct canvases of engagement.",
+                "bertScore": "BERT Score: 0.87",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.16246434,
+                        0.02953066,
+                        0.02674888,
+                        0.02858804,
+                        0.08567671,
+                        0.01774713,
+                        0.0881578,
+                        0.07450742,
+                        0.06669696,
+                        0.08684919,
+                        0.03160284,
+                        0.02565594,
+                        0.01903035,
+                        0.04114657
+                    ]
+                }
             }
         ]
     },
@@ -704,6 +1055,45 @@
                         0.05977517,
                         0.02806994,
                         0.10782874
+                    ]
+                }
+            },
+            {
+                "headerValue": "",
+                "text": "Raffles, upon his initial voyage, correctly recorded Singapore's discovery as 27 January 1819. However, a subsequent correction revealed his initial miscalculation, where he corresponded to the year 1819, but the precise date was adhered to originally as per his second journey's account.",
+                "bertScore": "BERT Score: 0.91",
+                "chart2Data": {
+                    "labels": [
+                        "Inappropriateness",
+                        "Toxic Emotions",
+                        "Excessive Intensity",
+                        "Emotional Deception",
+                        "Missing Commitment",
+                        "Missing Seriousness",
+                        "Missing Openness",
+                        "Missing Intelligibility",
+                        "Unclear Meaning",
+                        "Missing Relevance",
+                        "Confusing Reasoning",
+                        "Other Reasons",
+                        "Detrimental Orthography",
+                        "Reason Unclassified"
+                    ],
+                    "values": [
+                        0.04520027,
+                        0.01168908,
+                        0.01160587,
+                        0.01057176,
+                        0.02390997,
+                        0.02739413,
+                        0.02498867,
+                        0.07812434,
+                        0.06807644,
+                        0.06324192,
+                        0.03824011,
+                        0.04347291,
+                        0.03467144,
+                        0.06757309
                     ]
                 }
             }

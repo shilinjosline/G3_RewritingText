@@ -62,10 +62,10 @@
             width: 45%;
         }
         .chart-container h3 {
-            text-align: center; /* Center the header above the chart */
-            margin-bottom: 10px; /* Add spacing between the header and chart */
-            font-size: 18px; /* Adjust font size */
-            color: #333; /* Adjust text color */
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
         }
         .bert-score {
             position: absolute;
@@ -96,18 +96,18 @@
             background-color: #444;
         }
         .added {
-            background-color: #d4f8d4; /* Green background for added text */
+            background-color: #d4f8d4;
             font-weight: bold;
         }
         .removed {
-            background-color: #f8d4d4; /* Red background for removed text */
+            background-color: #f8d4d4;
             font-weight: bold;
             text-decoration: line-through;
         }
     </style>
 </head>
 <body>
-    <h1 id="topic">Topic: William Farquhar and Singapore</h1>
+    <h1 id="topic">Topic: William and Singapore</h1>
 
     <div class="content">
         <div class="text-section">
@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="charts">
         <div class="chart-container">
             <h3>Class Probabilities</h3>
@@ -265,9 +265,26 @@
             document.getElementById('bertScore').innerText = rewritten.bertScore;
             updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
 
+            // Update chart1 with the current dataset's chart data
+            chart1.data.labels = data.chart1Data.labels;
+            chart1.data.datasets = [{
+                label: 'Values',
+                data: data.chart1Data.values,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 1
+            }];
+            chart1.update();
+
             // Update chart2 with the current rewritten text's chart data
             chart2.data.labels = rewritten.chart2Data.labels;
-            chart2.data.datasets[0].data = rewritten.chart2Data.values;
+            chart2.data.datasets = [{
+                label: 'Values',
+                data: rewritten.chart2Data.values,
+                borderColor: 'rgba(153, 102, 255, 1)',
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderWidth: 1
+            }];
             chart2.update();
         }
 
@@ -283,7 +300,6 @@
                 element.appendChild(span);
             });
         }
-
     </script>
 </body>
 </html>

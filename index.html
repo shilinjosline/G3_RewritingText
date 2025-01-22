@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page Navigation with Inline Differences</title>
+    <title>Dynamic Page with Similar Words Highlight</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/diff/dist/diff.min.js"></script>
-        <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -35,28 +34,6 @@
             white-space: pre-wrap;
             line-height: 1.6;
         }
-        .rewritten-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Space the arrows outside the text */
-            gap: 10px;
-            position: relative;
-            padding: 0 20px; /* Adds spacing for arrows outside the box */
-        }
-        .arrow {
-            font-size: 1.2em;
-            cursor: pointer;
-            user-select: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            background-color: #555; /* Darker grey background */
-            color: #fff; /* White text */
-            position: relative;
-            margin-top: -10px; /* Adjusts to align with the header */
-        } 
-        .arrow:hover {
-            background-color: #333; /* Even darker grey on hover */
-        }
         .charts {
             display: flex;
             justify-content: space-around;
@@ -82,28 +59,9 @@
             border-radius: 3px;
             font-weight: bold;
         }
-        .arrows {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .arrows .arrow {
-            font-size: 1.2em;  /* Smaller arrows at the bottom */
-            padding: 5px 10px;
-        }
-        .added {
-            background-color: #d4f8d4;
+        .highlight {
+            background-color: #d4f8d4; /* Light green for similar words */
             font-weight: bold;
-        }
-        .removed {
-            background-color: #f8d4d4;
-            font-weight: bold;
-            text-decoration: line-through;
         }
     </style>
 </head>
@@ -119,11 +77,7 @@
         </div>
 
         <div class="text-section">
-            <div class="rewritten-header">
-                <span class="arrow" onclick="navigateRewritten(-1)">&#8592;</span>
-                <h3 id="rewrittenHeader">Rewritten Text: Toxic Emotions</h3>
-                <span class="arrow" onclick="navigateRewritten(1)">&#8594;</span>
-            </div>
+            <h3 id="rewrittenHeader">Rewritten Text</h3>
             <div class="rewritten-text" id="rewrittenText">
                 Modified text with highlights will appear here.
             </div>
@@ -145,24 +99,18 @@
         BERT Score: 88%
     </div>
 
-    <div class="arrows">
-        <span class="arrow" onclick="navigate(-1)">&#8592;</span>
-        <span class="arrow" onclick="navigate(1)">&#8594;</span>
-    </div>
-
     <script>
         let datasets = []; // This will hold the data from the external file
         let currentIndex = 0;
-        let rewrittenIndex = 0;
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
-        
+
         const chart1 = new Chart(ctx1, {
             type: 'bar',
             data: {},
             options: {
-                indexAxis: 'y', 
+                indexAxis: 'y',
                 plugins: {
                     legend: {
                         display: false
@@ -235,70 +183,56 @@
             .then(response => response.json())
             .then(data => {
                 datasets = data; // Store the data in the datasets array
-                navigate(0); // Start by navigating to the first dataset
+                displayData(); // Display the first dataset
             })
             .catch(error => console.error('Error loading data:', error));
 
-        function navigate(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = datasets.length - 1;
-            if (currentIndex >= datasets.length) currentIndex = 0;
-
-            rewrittenIndex = 0;
+        function displayData() {
             const data = datasets[currentIndex];
+
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            updateRewrittenText();
-        }
-
-        function navigateRewritten(direction) {
-            const data = datasets[currentIndex];
-            rewrittenIndex += direction;
-            if (rewrittenIndex < 0) rewrittenIndex = data.rewrittenTexts.length - 1;
-            if (rewrittenIndex >= data.rewrittenTexts.length) rewrittenIndex = 0;
-            updateRewrittenText();
-        }
-
-        function updateRewrittenText() {
-            const data = datasets[currentIndex];
-            const rewritten = data.rewrittenTexts[rewrittenIndex];
-            document.getElementById('rewrittenHeader').innerText = `Rewritten Text: ${rewritten.headerValue}`;
-            document.getElementById('bertScore').innerText = rewritten.bertScore;
-            updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
+            highlightSimilarWords(data.inputText, data.rewrittenTexts[0].text);
 
             // Update chart1 with the current dataset's chart data
             chart1.data.labels = data.chart1Data.labels;
             chart1.data.datasets = [{
                 label: 'Values',
                 data: data.chart1Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)',  // Grey border color
-                backgroundColor: 'rgba(169, 169, 169, 0.2)',  // Grey background color
+                borderColor: 'rgba(169, 169, 169, 1)', // Grey border color
+                backgroundColor: 'rgba(169, 169, 169, 0.2)', // Grey background color
                 borderWidth: 1
             }];
             chart1.update();
 
-            // Update chart2 with the current rewritten text's chart data
+            // Update chart2 with the rewritten text's chart data
+            const rewritten = data.rewrittenTexts[0];
             chart2.data.labels = rewritten.chart2Data.labels;
             chart2.data.datasets = [{
                 label: 'Values',
                 data: rewritten.chart2Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)',  // Grey border color
-                backgroundColor: 'rgba(169, 169, 169, 0.2)',  // Grey background color
+                borderColor: 'rgba(169, 169, 169, 1)', // Grey border color
+                backgroundColor: 'rgba(169, 169, 169, 0.2)', // Grey background color
                 borderWidth: 1
             }];
             chart2.update();
+
+            document.getElementById('bertScore').innerText = rewritten.bertScore;
         }
 
-        function updateTextWithDifferences(elementId, text1, text2) {
-            const diff = Diff.diffWords(text1, text2);
-            const element = document.getElementById(elementId);
-            element.innerHTML = '';
-            diff.forEach(part => {
+        function highlightSimilarWords(inputText, rewrittenText) {
+            const inputWords = inputText.split(/\s+/);
+            const rewrittenWords = rewrittenText.split(/\s+/);
+            const rewrittenContainer = document.getElementById('rewrittenText');
+            rewrittenContainer.innerHTML = '';
+
+            rewrittenWords.forEach(word => {
                 const span = document.createElement('span');
-                span.textContent = part.value;
-                if (part.added) span.classList.add('added');
-                else if (part.removed) span.classList.add('removed');
-                element.appendChild(span);
+                span.textContent = word + ' ';
+                if (inputWords.includes(word)) {
+                    span.classList.add('highlight'); // Highlight similar words
+                }
+                rewrittenContainer.appendChild(span);
             });
         }
     </script>

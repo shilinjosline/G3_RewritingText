@@ -38,22 +38,24 @@
         .rewritten-header {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between; /* Space the arrows outside the text */
             gap: 10px;
             position: relative;
+            padding: 0 20px; /* Adds spacing for arrows outside the box */
         }
         .arrow {
-            font-size: 1.2em;  /* Smaller size for arrows */
+            font-size: 1.2em;
             cursor: pointer;
             user-select: none;
             padding: 5px 10px;
             border-radius: 3px;
-            background-color: #d3d3d3;  /* Grey background */
-            color: #555;  /* Grey color */
-        }
+            background-color: #555; /* Darker grey background */
+            color: #fff; /* White text */
+            position: relative;
+            margin-top: -10px; /* Adjusts to align with the header */
+        } 
         .arrow:hover {
-            background-color: #a9a9a9;  /* Darker grey on hover */
-            color: #fff;  /* White color on hover */
+            background-color: #333; /* Even darker grey on hover */
         }
         .charts {
             display: flex;

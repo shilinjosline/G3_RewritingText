@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Row-Based Navigation</title>
+    <title>Dynamic Page Navigation with Inline Differences</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff/5.1.0/diff.min.js"></script>
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/diff/dist/diff.min.js"></script>
+        <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -34,7 +34,6 @@
             border-radius: 5px;
             white-space: pre-wrap;
             line-height: 1.6;
-            background-color: #fff;
         }
         .charts {
             display: flex;
@@ -62,43 +61,46 @@
             font-weight: bold;
         }
         .arrows {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
-            margin-top: 30px;
+            gap: 30px;
+            margin-top: 20px;
         }
-        .arrow {
-            font-size: 24px;
-            margin: 0 15px;
-            padding: 10px 15px;
-            background-color: black;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .arrows .arrow:hover {
-            background-color: #333;
+        .arrows .arrow {
+            font-size: 1.2em;  /* Smaller arrows at the bottom */
+            padding: 5px 10px;
         }
         .added {
             background-color: #d4f8d4;
+            font-weight: bold;
         }
         .removed {
             background-color: #f8d4d4;
+            font-weight: bold;
+            text-decoration: line-through;
         }
     </style>
 </head>
 <body>
-    <h1 id="topic">Dynamic Row-Based Navigation</h1>
+    <h1 id="topic">Topic: William and Singapore</h1>
 
     <div class="content">
         <div class="text-section">
             <h3>Original Text</h3>
-            <div class="input-text" id="inputText">Original text will appear here.</div>
+            <div class="input-text" id="inputText">
+                Original text will appear here.
+            </div>
         </div>
 
         <div class="text-section">
             <h3>Rewritten Text</h3>
-            <div class="rewritten-text" id="rewrittenText">Rewritten text will appear here.</div>
+            <div class="rewritten-text" id="rewrittenText">
+                Modified text with highlights will appear here.
+            </div>
         </div>
     </div>
 
@@ -113,37 +115,55 @@
         </div>
     </div>
 
+    <div class="bert-score" id="bertScore">
+        BERT Score: 88%
+    </div>
+
     <div class="arrows">
         <span class="arrow" onclick="navigate(-1)">&#8592;</span>
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
-    <div class="bert-score" id="bertScore">BERT Score: 88%</div>
-
     <script>
-        let datasets = [];
+        let datasets = []; // This will hold the data from the external file
         let currentIndex = 0;
+        let rewrittenIndex = 0;
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
         const ctx2 = document.getElementById('chart2').getContext('2d');
-
+        
         const chart1 = new Chart(ctx1, {
             type: 'bar',
             data: {},
             options: {
-                indexAxis: 'y',
+                indexAxis: 'y', 
                 plugins: {
-                    legend: { display: false }
+                    legend: {
+                        display: false
+                    }
                 },
                 scales: {
                     x: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
-                        ticks: { stepSize: 0.1 },
-                        title: { display: true, text: 'Probability' }
+                        ticks: {
+                            stepSize: 0.1,
+                            callback: function(value) {
+                                return value.toFixed(1);
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Probability',
+                            font: {
+                                size: 14
+                            }
+                        }
                     },
-                    y: { grid: { display: false } }
+                    y: {
+                        grid: { display: false }
+                    }
                 }
             }
         });
@@ -154,95 +174,84 @@
             options: {
                 indexAxis: 'y',
                 plugins: {
-                    legend: { display: false }
+                    legend: {
+                        display: false
+                    }
                 },
                 scales: {
                     x: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
-                        ticks: { stepSize: 0.1 },
-                        title: { display: true, text: 'Probability' }
+                        ticks: {
+                            stepSize: 0.1,
+                            callback: function(value) {
+                                return value.toFixed(1);
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Probability',
+                            font: {
+                                size: 14
+                            }
+                        }
                     },
-                    y: { grid: { display: false } }
+                    y: {
+                        grid: { display: false }
+                    }
                 }
             }
         });
 
+        // Fetch the data from the external JSON file
         fetch('data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                datasets = data;
-                if (datasets.length > 0) {
-                    navigate(0);
-                } else {
-                    console.error('Datasets are empty');
-                }
+                datasets = data; // Store the data in the datasets array
+                navigate(0); // Start by navigating to the first dataset
             })
-            .catch(error => {
-                console.error('Error loading data:', error);
-                alert('Failed to load data. Please try again later.');
-            });
+            .catch(error => console.error('Error loading data:', error));
 
         function navigate(direction) {
-            if (!datasets || datasets.length === 0) {
-                console.error('No datasets available');
-                return;
-            }
-
             currentIndex += direction;
             if (currentIndex < 0) currentIndex = datasets.length - 1;
             if (currentIndex >= datasets.length) currentIndex = 0;
 
+            rewrittenIndex = 0;
             const data = datasets[currentIndex];
+            document.getElementById('topic').innerText = data.topic;
+            document.getElementById('inputText').innerText = data.inputText;
+            updateRewrittenText();
+        }
 
-            document.getElementById('topic').innerText = data.topic || 'No topic available';
-            document.getElementById('inputText').innerText = data.inputText || 'No input text available';
+        function updateRewrittenText() {
+            const data = datasets[currentIndex];
+            const rewritten = data.rewrittenTexts;
+            document.getElementById('bertScore').innerText = rewritten.bertScore;
+            updateTextWithDifferences('rewrittenText', data.inputText, rewritten.text);
 
-            if (data.rewrittenTexts && data.rewrittenTexts.text) {
-                updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenTexts.text);
-            } else {
-                document.getElementById('rewrittenText').innerText = 'Rewritten text not available';
-            }
+            // Update chart1 with the current dataset's chart data
+            chart1.data.labels = data.chart1Data.labels;
+            chart1.data.datasets = [{
+                label: 'Values',
+                data: data.chart1Data.values,
+                borderColor: 'rgba(169, 169, 169, 1)',  // Grey border color
+                backgroundColor: 'rgba(169, 169, 169, 0.2)',  // Grey background color
+                borderWidth: 1
+            }];
+            chart1.update();
 
-            if (data.chart1Data && data.chart1Data.labels && data.chart1Data.values) {
-                chart1.data = {
-                    labels: data.chart1Data.labels,
-                    datasets: [{
-                        label: 'Values',
-                        data: data.chart1Data.values,
-                        backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                        borderColor: 'rgba(169, 169, 169, 1)',
-                        borderWidth: 1
-                    }]
-                };
-                chart1.update();
-            } else {
-                console.warn('chart1Data is missing or invalid');
-            }
-
-            if (data.rewrittenTexts && data.rewrittenTexts.chart2Data) {
-                chart2.data = {
-                    labels: data.rewrittenTexts.chart2Data.labels,
-                    datasets: [{
-                        label: 'Values',
-                        data: data.rewrittenTexts.chart2Data.values,
-                        backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                        borderColor: 'rgba(169, 169, 169, 1)',
-                        borderWidth: 1
-                    }]
-                };
-                chart2.update();
-            } else {
-                console.warn('chart2Data is missing or invalid');
-            }
-
-            document.getElementById('bertScore').innerText = data.rewrittenTexts ? data.rewrittenTexts.bertScore || 'BERT Score: N/A' : 'BERT Score: N/A';
+            // Update chart2 with the current rewritten text's chart data
+            chart2.data.labels = rewritten.chart2Data.labels;
+            chart2.data.datasets = [{
+                label: 'Values',
+                data: rewritten.chart2Data.values,
+                borderColor: 'rgba(169, 169, 169, 1)',  // Grey border color
+                backgroundColor: 'rgba(169, 169, 169, 0.2)',  // Grey background color
+                borderWidth: 1
+            }];
+            chart2.update();
         }
 
         function updateTextWithDifferences(elementId, text1, text2) {

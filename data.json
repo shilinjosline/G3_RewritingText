@@ -1,0 +1,30 @@
+[
+    {
+        "topic": "Topic: William Farquhar and Singapore",
+        "inputText": "People can't be forced to wear school uniforms, I mean each person has their own wish whether they want to or don't want to wear school uniforms. I think each principal should think once again regarding the uniforms and should make a decision whether to make uniforms compulsory or not.",
+        "rewrittenTexts": [
+            {
+                "headerValue": "Toxic Emotions",
+                "text": "School uniforms should be approached as a matter of individual preference. Each person has their own perspective on whether they wish to wear a uniform or not. It might be valuable for school principals to thoughtfully reconsider the current policies and assess whether making uniforms mandatory aligns with the diverse needs and preferences of the students.",
+                "bertScore": "BERT Score: 88%",
+                "chart2Data": {
+                    "labels": ["Inappropriateness", "Toxic Emotions", "Excessive Intensity", "Emotional Deception", "Missing Commitment", "Missing Seriousness", "Missing Openness", "Missing Intelligibility", "Unclear Meaning", "Missing Relevance", "Confusing Reasoning", "Other Reasons", "Detrimental Orthography", "Reason Unclassified"],
+                    "values": [0.4, 0.3, 0.2, 0.1, 1.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+                }
+            },
+            {
+                "headerValue": "Constructive Feedback",
+                "text": "School uniforms represent a unifying symbol for students but should remain an optional choice to respect individuality and personal expression.",
+                "bertScore": "BERT Score: 85%",
+                "chart2Data": {
+                    "labels": ["Inappropriateness", "Toxic Emotions", "Excessive Intensity", "Emotional Deception", "Missing Commitment", "Missing Seriousness", "Missing Openness", "Missing Intelligibility", "Unclear Meaning", "Missing Relevance", "Confusing Reasoning", "Other Reasons", "Detrimental Orthography", "Reason Unclassified"],
+                    "values": [0.4, 0.3, 0.2, 0.1, 1.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+                }
+            }
+        ],
+        "chart1Data": {
+            "labels": ["Inappropriateness", "Toxic Emotions", "Excessive Intensity", "Emotional Deception", "Missing Commitment", "Missing Seriousness", "Missing Openness", "Missing Intelligibility", "Unclear Meaning", "Missing Relevance", "Confusing Reasoning", "Other Reasons", "Detrimental Orthography", "Reason Unclassified"],
+            "values": [0.4, 0.3, 0.2, 0.1, 1.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+        }
+    }
+]

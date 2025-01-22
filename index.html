@@ -13,9 +13,16 @@
             padding: 20px;
             background-color: #f4f4f4;
             color: #333;
+            font-size: 14px; /* Base font size */
         }
-        h1, h3 {
+        h1 {
             text-align: center;
+            font-size: 20px; /* Smaller heading font */
+        }
+        h3 {
+            text-align: center;
+            font-size: 16px; /* Smaller subheading font */
+            margin-bottom: 10px;
         }
         .content {
             display: flex;
@@ -25,7 +32,7 @@
         }
         .text-section {
             flex: 1 1 45%;
-            padding: 15px;
+            padding: 10px;
             margin: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -35,7 +42,8 @@
             padding: 10px;
             border-radius: 5px;
             white-space: pre-wrap;
-            line-height: 1.6;
+            line-height: 1.4;
+            font-size: 14px; /* Smaller text font */
         }
         .charts {
             display: flex;
@@ -48,9 +56,7 @@
             margin: 10px;
         }
         .chart-container h3 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 14px; /* Smaller chart heading font */
             color: #333;
         }
         .bert-score {
@@ -58,7 +64,7 @@
             top: 20px;
             right: 20px;
             padding: 5px 10px;
-            font-size: 12px;
+            font-size: 12px; /* Smaller BERT score font */
             background-color: black;
             color: white;
             border-radius: 3px;
@@ -71,18 +77,9 @@
             margin: 20px 0;
         }
         .arrows .arrow {
-            font-size: 1.2em;
+            font-size: 12px; /* Smaller arrow text */
             padding: 5px 10px;
             cursor: pointer;
-        }
-        .added {
-            background-color: #d4f8d4;
-            font-weight: bold;
-        }
-        .removed {
-            background-color: #f8d4d4;
-            font-weight: bold;
-            text-decoration: line-through;
         }
         .plain-text-box {
             margin: 20px auto;
@@ -90,17 +87,16 @@
             max-width: 800px;
         }
         .plain-text-box h3 {
-            text-align: center;
-            font-size: 18px;
+            font-size: 14px; /* Smaller plain text heading font */
             color: #333;
         }
         textarea {
             width: 100%;
-            height: 150px;
+            height: 120px;
             padding: 10px;
-            font-size: 16px;
+            font-size: 14px; /* Smaller textarea font */
             font-family: Arial, sans-serif;
-            line-height: 1.5;
+            line-height: 1.4;
             border: 1px solid #ccc;
             border-radius: 5px;
             resize: none;

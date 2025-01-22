@@ -254,20 +254,9 @@
         function navigateRewritten(direction) {
             const data = datasets[currentIndex];
             rewrittenIndex += direction;
-        
-            // Check boundaries and adjust rewrittenIndex
-            if (rewrittenIndex < 0) {
-                rewrittenIndex = 0;
-            } else if (rewrittenIndex >= data.rewrittenTexts.length) {
-                rewrittenIndex = data.rewrittenTexts.length - 1;
-            }
-        
+            if (rewrittenIndex < 0) rewrittenIndex = data.rewrittenTexts.length - 1;
+            if (rewrittenIndex >= data.rewrittenTexts.length) rewrittenIndex = 0;
             updateRewrittenText();
-        
-            // Hide or show arrows based on boundaries
-            document.querySelector('.rewritten-header .arrow:nth-child(1)').style.visibility = rewrittenIndex === 0 ? 'hidden' : 'visible'; // Left arrow
-            document.querySelector('.rewritten-header .arrow:nth-child(3)').style.visibility =
-                rewrittenIndex === data.rewrittenTexts.length - 1 ? 'hidden' : 'visible'; // Right arrow
         }
 
         function updateRewrittenText() {

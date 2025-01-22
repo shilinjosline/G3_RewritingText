@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Row-Based Navigation</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff/5.1.0/diff.min.js"></script> <!-- Include diff.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff/5.1.0/diff.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,10 +80,10 @@
             background-color: #333;
         }
         .added {
-            background-color: #d4f8d4; /* Light green for added words */
+            background-color: #d4f8d4;
         }
         .removed {
-            background-color: #f8d4d4; /* Light red for removed words */
+            background-color: #f8d4d4;
         }
     </style>
 </head>
@@ -93,16 +93,12 @@
     <div class="content">
         <div class="text-section">
             <h3>Original Text</h3>
-            <div class="input-text" id="inputText">
-                Original text will appear here.
-            </div>
+            <div class="input-text" id="inputText">Original text will appear here.</div>
         </div>
 
         <div class="text-section">
             <h3>Rewritten Text</h3>
-            <div class="rewritten-text" id="rewrittenText">
-                Rewritten text will appear here.
-            </div>
+            <div class="rewritten-text" id="rewrittenText">Rewritten text will appear here.</div>
         </div>
     </div>
 
@@ -122,12 +118,10 @@
         <span class="arrow" onclick="navigate(1)">&#8594;</span>
     </div>
 
-    <div class="bert-score" id="bertScore">
-        BERT Score: 88%
-    </div>
+    <div class="bert-score" id="bertScore">BERT Score: 88%</div>
 
     <script>
-        let datasets = []; // This will hold the data from the external file
+        let datasets = [];
         let currentIndex = 0;
 
         const ctx1 = document.getElementById('chart1').getContext('2d');
@@ -139,32 +133,17 @@
             options: {
                 indexAxis: 'y',
                 plugins: {
-                    legend: {
-                        display: false
-                    }
+                    legend: { display: false }
                 },
                 scales: {
                     x: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
-                        ticks: {
-                            stepSize: 0.1,
-                            callback: function(value) {
-                                return value.toFixed(1);
-                            }
-                        },
-                        title: {
-                            display: true,
-                            text: 'Probability',
-                            font: {
-                                size: 14
-                            }
-                        }
+                        ticks: { stepSize: 0.1 },
+                        title: { display: true, text: 'Probability' }
                     },
-                    y: {
-                        grid: { display: false }
-                    }
+                    y: { grid: { display: false } }
                 }
             }
         });
@@ -175,42 +154,26 @@
             options: {
                 indexAxis: 'y',
                 plugins: {
-                    legend: {
-                        display: false
-                    }
+                    legend: { display: false }
                 },
                 scales: {
                     x: {
                         beginAtZero: true,
                         min: 0.0,
                         max: 1.0,
-                        ticks: {
-                            stepSize: 0.1,
-                            callback: function(value) {
-                                return value.toFixed(1);
-                            }
-                        },
-                        title: {
-                            display: true,
-                            text: 'Probability',
-                            font: {
-                                size: 14
-                            }
-                        }
+                        ticks: { stepSize: 0.1 },
+                        title: { display: true, text: 'Probability' }
                     },
-                    y: {
-                        grid: { display: false }
-                    }
+                    y: { grid: { display: false } }
                 }
             }
         });
 
-        // Fetch the data from the external JSON file
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
-                datasets = data; // Store the data in the datasets array
-                navigate(0); // Start by navigating to the first dataset
+                datasets = data;
+                navigate(0);
             })
             .catch(error => console.error('Error loading data:', error));
 
@@ -220,31 +183,45 @@
             if (currentIndex >= datasets.length) currentIndex = 0;
 
             const data = datasets[currentIndex];
+
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenTexts.text);
 
-            chart1.data.labels = data.chart1Data.labels;
-            chart1.data.datasets = [{
-                label: 'Values',
-                data: data.chart1Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)',
-                backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                borderWidth: 1
-            }];
-            chart1.update();
+            if (data.rewrittenTexts && data.rewrittenTexts.text) {
+                updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenTexts.text);
+            } else {
+                document.getElementById('rewrittenText').innerText = 'Rewritten text not available';
+            }
 
-            chart2.data.labels = data.rewrittenTexts.chart2Data.labels;
-            chart2.data.datasets = [{
-                label: 'Values',
-                data: data.rewrittenTexts.chart2Data.values,
-                borderColor: 'rgba(169, 169, 169, 1)',
-                backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                borderWidth: 1
-            }];
-            chart2.update();
+            if (data.chart1Data) {
+                chart1.data = {
+                    labels: data.chart1Data.labels,
+                    datasets: [{
+                        label: 'Values',
+                        data: data.chart1Data.values,
+                        backgroundColor: 'rgba(169, 169, 169, 0.2)',
+                        borderColor: 'rgba(169, 169, 169, 1)',
+                        borderWidth: 1
+                    }]
+                };
+                chart1.update();
+            }
 
-            document.getElementById('bertScore').innerText = data.rewrittenTexts.bertScore;
+            if (data.rewrittenTexts && data.rewrittenTexts.chart2Data) {
+                chart2.data = {
+                    labels: data.rewrittenTexts.chart2Data.labels,
+                    datasets: [{
+                        label: 'Values',
+                        data: data.rewrittenTexts.chart2Data.values,
+                        backgroundColor: 'rgba(169, 169, 169, 0.2)',
+                        borderColor: 'rgba(169, 169, 169, 1)',
+                        borderWidth: 1
+                    }]
+                };
+                chart2.update();
+            }
+
+            document.getElementById('bertScore').innerText = data.rewrittenTexts ? data.rewrittenTexts.bertScore : 'BERT Score: N/A';
         }
 
         function updateTextWithDifferences(elementId, text1, text2) {

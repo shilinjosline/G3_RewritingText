@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Row-Based Page with Similar Words Highlight</title>
+    <title>Dynamic Row-Based Navigation</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff/5.1.0/diff.min.js"></script> <!-- Include diff.js -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,29 +79,11 @@
         .arrows .arrow:hover {
             background-color: #333;
         }
-        .text-boxes {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+        .added {
+            background-color: #d4f8d4; /* Light green for added words */
         }
-        .text-box {
-            width: 45%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fefefe;
-            min-height: 100px;
-        }
-        .text-box h3 {
-            margin-bottom: 10px;
-        }
-        .highlight {
-            background-color: #d4f8d4; /* Light green for similar words */
-            font-weight: bold;
-        }
-        .difference {
-            background-color: #f8d4d4; /* Light red for differences */
-            font-weight: bold;
+        .removed {
+            background-color: #f8d4d4; /* Light red for removed words */
         }
     </style>
 </head>
@@ -131,21 +114,6 @@
         <div class="chart-container">
             <h3>Class Probabilities</h3>
             <canvas id="chart2"></canvas>
-        </div>
-    </div>
-
-    <div class="text-boxes">
-        <div class="text-box" id="similarWordsBox">
-            <h3>Similar Words</h3>
-            <div id="similarWords">
-                Similar words will appear here.
-            </div>
-        </div>
-        <div class="text-box" id="differencesBox">
-            <h3>Differences</h3>
-            <div id="differences">
-                Differences will appear here.
-            </div>
         </div>
     </div>
 
@@ -242,21 +210,19 @@
             .then(response => response.json())
             .then(data => {
                 datasets = data; // Store the data in the datasets array
-                navigate(0); // Start by navigating to the first row
+                navigate(0); // Start by navigating to the first dataset
             })
             .catch(error => console.error('Error loading data:', error));
 
         function navigate(direction) {
             currentIndex += direction;
-            if (currentIndex < 0) currentIndex = datasets.length - 1; // Loop back to last row
-            if (currentIndex >= datasets.length) currentIndex = 0;   // Loop back to first row
+            if (currentIndex < 0) currentIndex = datasets.length - 1;
+            if (currentIndex >= datasets.length) currentIndex = 0;
 
             const data = datasets[currentIndex];
             document.getElementById('topic').innerText = data.topic;
             document.getElementById('inputText').innerText = data.inputText;
-            document.getElementById('rewrittenText').innerText = data.rewrittenTexts.text;
-
-            updateTextBoxes(data.inputText, data.rewrittenTexts.text);
+            updateTextWithDifferences('rewrittenText', data.inputText, data.rewrittenTexts.text);
 
             chart1.data.labels = data.chart1Data.labels;
             chart1.data.datasets = [{
@@ -281,15 +247,17 @@
             document.getElementById('bertScore').innerText = data.rewrittenTexts.bertScore;
         }
 
-        function updateTextBoxes(inputText, rewrittenText) {
-            const inputWords = inputText.split(/\s+/);
-            const rewrittenWords = rewrittenText.split(/\s+/);
-
-            const similarWords = inputWords.filter(word => rewrittenWords.includes(word));
-            const differences = rewrittenWords.filter(word => !inputWords.includes(word));
-
-            document.getElementById('similarWords').innerText = similarWords.join(' ');
-            document.getElementById('differences').innerText = differences.join(' ');
+        function updateTextWithDifferences(elementId, text1, text2) {
+            const diff = Diff.diffWords(text1, text2);
+            const element = document.getElementById(elementId);
+            element.innerHTML = '';
+            diff.forEach(part => {
+                const span = document.createElement('span');
+                span.textContent = part.value;
+                if (part.added) span.classList.add('added');
+                else if (part.removed) span.classList.add('removed');
+                element.appendChild(span);
+            });
         }
     </script>
 </body>

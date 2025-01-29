@@ -9,6 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            font-size: 14px;
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
@@ -25,39 +26,33 @@
         }
         .text-section {
             flex: 1 1 45%;
-            padding: 15px;
+            padding: 10px;
             margin: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: #fefefe;
         }
         .input-text, .rewritten-text {
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
             white-space: pre-wrap;
-            line-height: 1.6;
+            line-height: 1.4;
         }
         .charts {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .chart-container {
             flex: 1 1 45%;
             margin: 10px;
         }
-        .chart-container h3 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 16px;
-            color: #333;
-        }
         .bert-score {
             position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 5px 10px;
+            top: 15px;
+            right: 15px;
+            padding: 5px 8px;
             font-size: 12px;
             background-color: black;
             color: white;
@@ -67,47 +62,29 @@
         .arrows {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin: 20px 0;
         }
-        .arrows .arrow {
-            font-size: 1.2em;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
         .added {
-            background-color: #d4f8d4;
+            background-color: #bdf2bd;
             font-weight: bold;
+            padding: 2px;
         }
         .removed {
-            background-color: #f8d4d4;
-            font-weight: bold;
+            background-color: #f5c6c6;
             text-decoration: line-through;
-        }
-        .plain-text-box {
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-        }
-        .plain-text-box h3 {
-            text-align: center;
-            font-size: 16px;
-            color: #333;
+            padding: 2px;
         }
         textarea {
             width: 100%;
-            height: 150px;
-            padding: 10px;
-            font-size: 14px;
+            height: 130px;
+            padding: 8px;
+            font-size: 13px;
             font-family: Arial, sans-serif;
-            line-height: 1.5;
             border: 1px solid #ccc;
             border-radius: 5px;
             resize: none;
             background-color: #fefefe;
-        }
-        textarea[readonly] {
-            cursor: not-allowed;
         }
     </style>
 </head>
@@ -119,7 +96,6 @@
             <h3>Original Text</h3>
             <div class="input-text" id="inputText">Original text will appear here.</div>
         </div>
-
         <div class="text-section">
             <h3>Rewritten Text</h3>
             <div class="rewritten-text" id="rewrittenText">Modified text with highlights will appear here.</div>
@@ -138,49 +114,30 @@
     </div>
 
     <div class="bert-score" id="bertScore">BERT Score: 0.00</div>
-
-    <div class="arrows">
-        <span class="arrow" onclick="navigate(-1)">&#8592; Previous Topic</span>
-        <span class="arrow" onclick="navigate(1)">Next Topic &#8594;</span>
-    </div>
-
-    <div class="plain-text-box">
-        <h3>Rewritten Text (Plain)</h3>
-        <textarea id="plainTextBox" readonly></textarea>
-    </div>
-
+    
     <script>
         let datasets = [];
         let currentIndex = 0;
 
+        const chartOptions = {
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { beginAtZero: true, max: 1.0, grid: { display: false } },
+                y: { grid: { display: false } }
+            }
+        };
+
         const chart1 = new Chart(document.getElementById('chart1').getContext('2d'), {
             type: 'bar',
             data: {},
-            options: {
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    x: { beginAtZero: true, grid: { display: false } },
-                    y: { grid: { display: false } }
-                }
-            }
+            options: chartOptions
         });
-
+        
         const chart2 = new Chart(document.getElementById('chart2').getContext('2d'), {
             type: 'bar',
             data: {},
-            options: {
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    x: { beginAtZero: true, grid: { display: false } },
-                    y: { grid: { display: false } }
-                }
-            }
+            options: chartOptions
         });
 
         fetch('data.json')
@@ -202,24 +159,14 @@
         }
 
         function updateRewrittenText(data) {
-            const rewritten = data.rewrittenTexts[0]; // Get the single rewritten text
-            if (!rewritten) {
-                document.getElementById('rewrittenText').innerText = 'No rewritten text available';
-                document.getElementById('plainTextBox').value = 'No rewritten text available';
-                document.getElementById('bertScore').innerText = 'BERT Score: N/A';
-                chart2.data = { labels: [], datasets: [] };
-                chart2.update();
-                return;
-            }
-
-            document.getElementById('bertScore').innerText = rewritten.bertScore || 'BERT Score: N/A';
+            const rewritten = data.rewrittenTexts?.[0] ?? { text: '', bertScore: 'N/A', chart2Data: { labels: [], values: [] } };
+            document.getElementById('bertScore').innerText = `BERT Score: ${rewritten.bertScore}`;
             updateTextWithDifferences('rewrittenText', data.inputText || '', rewritten.text || '');
-            document.getElementById('plainTextBox').value = rewritten.text || '';
-
+            
             chart1.data = {
-                labels: data.chart1Data.labels || [],
+                labels: data.chart1Data?.labels ?? [],
                 datasets: [{
-                    data: data.chart1Data.values || [],
+                    data: data.chart1Data?.values ?? [],
                     backgroundColor: 'rgba(169, 169, 169, 0.2)',
                     borderColor: 'rgba(169, 169, 169, 1)',
                     borderWidth: 1
@@ -228,9 +175,9 @@
             chart1.update();
 
             chart2.data = {
-                labels: rewritten.chart2Data.labels || [],
+                labels: rewritten.chart2Data?.labels ?? [],
                 datasets: [{
-                    data: rewritten.chart2Data.values || [],
+                    data: rewritten.chart2Data?.values ?? [],
                     backgroundColor: 'rgba(169, 169, 169, 0.2)',
                     borderColor: 'rgba(169, 169, 169, 1)',
                     borderWidth: 1
@@ -241,8 +188,7 @@
 
         function updateTextWithDifferences(elementId, text1, text2) {
             const diff = Diff.diffWords(text1, text2);
-            const element = document.getElementById(elementId);
-            element.innerHTML = diff.map(part => {
+            document.getElementById(elementId).innerHTML = diff.map(part => {
                 const className = part.added ? 'added' : part.removed ? 'removed' : '';
                 return `<span class="${className}">${part.value}</span>`;
             }).join('');

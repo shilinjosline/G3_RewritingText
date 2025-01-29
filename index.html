@@ -115,83 +115,22 @@
 
     <div class="bert-score" id="bertScore">BERT Score: 0.00</div>
     
+    <div class="arrows">
+        <span class="arrow" onclick="navigate(-1)">&#8592; Previous Topic</span>
+        <span class="arrow" onclick="navigate(1)">Next Topic &#8594;</span>
+    </div>
+    
+    <div class="plain-text-box">
+        <h3>Rewritten Text (Plain)</h3>
+        <textarea id="plainTextBox" readonly></textarea>
+    </div>
+    
     <script>
-        let datasets = [];
-        let currentIndex = 0;
-
-        const chartOptions = {
-            indexAxis: 'y',
-            plugins: { legend: { display: false } },
-            scales: {
-                x: { beginAtZero: true, max: 1.0, grid: { display: false } },
-                y: { grid: { display: false } }
-            }
-        };
-
-        const chart1 = new Chart(document.getElementById('chart1').getContext('2d'), {
-            type: 'bar',
-            data: {},
-            options: chartOptions
-        });
-        
-        const chart2 = new Chart(document.getElementById('chart2').getContext('2d'), {
-            type: 'bar',
-            data: {},
-            options: chartOptions
-        });
-
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                if (!Array.isArray(data) || data.length === 0) throw new Error('Invalid or empty data');
-                datasets = data;
-                navigate(0);
-            })
-            .catch(error => console.error('Error loading data:', error));
-
-        function navigate(direction) {
-            if (datasets.length === 0) return;
-            currentIndex = (currentIndex + direction + datasets.length) % datasets.length;
-            const data = datasets[currentIndex];
-            document.getElementById('topic').innerText = data.topic || 'Untitled';
-            document.getElementById('inputText').innerText = data.inputText || 'No text provided';
-            updateRewrittenText(data);
-        }
-
         function updateRewrittenText(data) {
             const rewritten = data.rewrittenTexts?.[0] ?? { text: '', bertScore: 'N/A', chart2Data: { labels: [], values: [] } };
             document.getElementById('bertScore').innerText = `BERT Score: ${rewritten.bertScore}`;
             updateTextWithDifferences('rewrittenText', data.inputText || '', rewritten.text || '');
-            
-            chart1.data = {
-                labels: data.chart1Data?.labels ?? [],
-                datasets: [{
-                    data: data.chart1Data?.values ?? [],
-                    backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                    borderColor: 'rgba(169, 169, 169, 1)',
-                    borderWidth: 1
-                }]
-            };
-            chart1.update();
-
-            chart2.data = {
-                labels: rewritten.chart2Data?.labels ?? [],
-                datasets: [{
-                    data: rewritten.chart2Data?.values ?? [],
-                    backgroundColor: 'rgba(169, 169, 169, 0.2)',
-                    borderColor: 'rgba(169, 169, 169, 1)',
-                    borderWidth: 1
-                }]
-            };
-            chart2.update();
-        }
-
-        function updateTextWithDifferences(elementId, text1, text2) {
-            const diff = Diff.diffWords(text1, text2);
-            document.getElementById(elementId).innerHTML = diff.map(part => {
-                const className = part.added ? 'added' : part.removed ? 'removed' : '';
-                return `<span class="${className}">${part.value}</span>`;
-            }).join('');
+            document.getElementById('plainTextBox').value = rewritten.text || '';
         }
     </script>
 </body>

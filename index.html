@@ -126,6 +126,26 @@
     </div>
     
     <script>
+        let datasets = [];
+        let currentIndex = 0;
+
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                datasets = data;
+                navigate(0);
+            })
+            .catch(error => console.error('Error loading data:', error));
+
+        function navigate(direction) {
+            if (datasets.length === 0) return;
+            currentIndex = (currentIndex + direction + datasets.length) % datasets.length;
+            const data = datasets[currentIndex];
+            document.getElementById('topic').innerText = data.topic || 'Untitled';
+            document.getElementById('inputText').innerText = data.inputText || 'No text provided';
+            updateRewrittenText(data);
+        }
+
         function updateRewrittenText(data) {
             const rewritten = data.rewrittenTexts?.[0] ?? { text: '', bertScore: 'N/A', chart2Data: { labels: [], values: [] } };
             document.getElementById('bertScore').innerText = `BERT Score: ${rewritten.bertScore}`;

@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 14px;
+            font-size: 12px; /* Reduced font size */
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
@@ -17,6 +17,7 @@
         }
         h1, h3 {
             text-align: center;
+            font-size: 14px; /* Reduced font size */
         }
         .content {
             display: flex;
@@ -26,33 +27,39 @@
         }
         .text-section {
             flex: 1 1 45%;
-            padding: 10px;
+            padding: 15px;
             margin: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: #fefefe;
         }
         .input-text, .rewritten-text {
-            padding: 8px;
+            padding: 10px;
             border-radius: 5px;
             white-space: pre-wrap;
-            line-height: 1.4;
+            line-height: 1.6;
         }
         .charts {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         .chart-container {
             flex: 1 1 45%;
             margin: 10px;
         }
+        .chart-container h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #333;
+        }
         .bert-score {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: 5px 8px;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
             font-size: 12px;
             background-color: black;
             color: white;
@@ -62,29 +69,47 @@
         .arrows {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             margin: 20px 0;
         }
+        .arrows .arrow {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
         .added {
-            background-color: #bdf2bd;
+            background-color: #d4f8d4;
             font-weight: bold;
-            padding: 2px;
         }
         .removed {
-            background-color: #f5c6c6;
+            background-color: #f8d4d4;
+            font-weight: bold;
             text-decoration: line-through;
-            padding: 2px;
+        }
+        .plain-text-box {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+        .plain-text-box h3 {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
         }
         textarea {
             width: 100%;
-            height: 130px;
-            padding: 8px;
-            font-size: 13px;
+            height: 150px;
+            padding: 10px;
+            font-size: 14px;
             font-family: Arial, sans-serif;
+            line-height: 1.5;
             border: 1px solid #ccc;
             border-radius: 5px;
             resize: none;
             background-color: #fefefe;
+        }
+        textarea[readonly] {
+            cursor: not-allowed;
         }
     </style>
 </head>
@@ -96,6 +121,7 @@
             <h3>Original Text</h3>
             <div class="input-text" id="inputText">Original text will appear here.</div>
         </div>
+
         <div class="text-section">
             <h3>Rewritten Text</h3>
             <div class="rewritten-text" id="rewrittenText">Modified text with highlights will appear here.</div>
@@ -114,21 +140,111 @@
     </div>
 
     <div class="bert-score" id="bertScore">BERT Score: 0.00</div>
-    
+
     <div class="arrows">
         <span class="arrow" onclick="navigate(-1)">&#8592; Previous Topic</span>
         <span class="arrow" onclick="navigate(1)">Next Topic &#8594;</span>
     </div>
-    
+
     <div class="plain-text-box">
         <h3>Rewritten Text (Plain)</h3>
         <textarea id="plainTextBox" readonly></textarea>
     </div>
-    
+
     <script>
+        let datasets = [];
+        let currentIndex = 0;
+
+        const chart1 = new Chart(document.getElementById('chart1').getContext('2d'), {
+            type: 'bar',
+            data: {},
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { beginAtZero: true, min: 0.0, max: 1.0, grid: { display: false } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        const chart2 = new Chart(document.getElementById('chart2').getContext('2d'), {
+            type: 'bar',
+            data: {},
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { beginAtZero: true, min: 0.0, max: 1.0, grid: { display: false } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+        
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                if (!Array.isArray(data) || data.length === 0) throw new Error('Invalid or empty data');
+                datasets = data;
+                navigate(0);
+            })
+            .catch(error => console.error('Error loading data:', error));
+
+        function navigate(direction) {
+            if (datasets.length === 0) return;
+            currentIndex = (currentIndex + direction + datasets.length) % datasets.length;
+            const data = datasets[currentIndex];
+            document.getElementById('topic').innerText = data.topic || 'Untitled';
+            document.getElementById('inputText').innerText = data.inputText || 'No text provided';
+            updateRewrittenText(data);
+        }
+
+        function updateRewrittenText(data) {
+            const rewritten = data.rewrittenTexts[0]; // Get the single rewritten text
+            if (!rewritten) {
+                document.getElementById('rewrittenText').innerText = 'No rewritten text available';
+                document.getElementById('plainTextBox').value = 'No rewritten text available';
+                document.getElementById('bertScore').innerText = 'BERT Score: N/A';
+                chart2.data = { labels: [], datasets: [] };
+                chart2.update();
+                return;
+            }
+
+            document.getElementById('bertScore').innerText = rewritten.bertScore || 'BERT Score: N/A';
+            updateTextWithDifferences('rewrittenText', data.inputText || '', rewritten.text || '');
+            document.getElementById('plainTextBox').value = rewritten.text || '';
+
+            chart1.data = {
+                labels: data.chart1Data.labels || [],
+                datasets: [{
+                    data: data.chart1Data.values || [],
+                    backgroundColor: 'rgba(169, 169, 169, 0.2)',
+                    borderColor: 'rgba(169, 169, 169, 1)',
+                    borderWidth: 1
+                }]
+            };
+            chart1.update();
+
+            chart2.data = {
+                labels: rewritten.chart2Data.labels || [],
+                datasets: [{
+                    data: rewritten.chart2Data.values || [],
+                    backgroundColor: 'rgba(169, 169, 169, 0.2)',
+                    borderColor: 'rgba(169, 169, 169, 1)',
+                    borderWidth: 1
+                }]
+            };
+            chart2.update();
+        }
+
         function updateTextWithDifferences(elementId, text1, text2) {
             const diff = Diff.diffWords(text1, text2);
-            document.getElementById(elementId).innerHTML = diff.map(part => {
+            const element = document.getElementById(elementId);
+            element.innerHTML = diff.map(part => {
                 const className = part.added ? 'added' : part.removed ? 'removed' : '';
                 return `<span class="${className}">${part.value}</span>`;
             }).join('');
